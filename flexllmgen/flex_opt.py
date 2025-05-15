@@ -1,10 +1,11 @@
 """
 Usage:
-python3 -m flexllmgen.flex_opt --model facebook/opt-1.3b --gpu-batch-size 32 --percent 100 0 100 0 100 0
+python3 -m flexgen.flex_opt --model facebook/opt-1.3b --gpu-batch-size 32 --percent 100 0 100 0 100 0
 """
 
 import argparse
 import dataclasses
+import enum
 import os
 import pickle
 import time
@@ -15,12 +16,12 @@ from tqdm import tqdm
 import torch
 from transformers import AutoTokenizer
 
-from flexllmgen.compression import CompressionConfig
-from flexllmgen.opt_config import OptConfig, get_opt_config, download_opt_weights
-from flexllmgen.pytorch_backend import (TorchDevice, TorchDisk, TorchLink,
+from flexgen.compression import CompressionConfig
+from flexgen.opt_config import OptConfig, get_opt_config, download_opt_weights
+from flexgen.pytorch_backend import (TorchDevice, TorchDisk, TorchLink,
     TorchMixedDevice, DeviceType, general_copy, fix_recursive_import)
-from flexllmgen.timer import timers
-from flexllmgen.utils import (Task, ExecutionEnv, GB, T, ValueHolder,
+from flexgen.timer import timers, timers_ns
+from flexgen.utils import (Task, ExecutionEnv, GB, T, ValueHolder,
     array_1d, array_2d, array_3d, str2bool, project_decode_latency,
     torch_mem_stats, torch_dtype_to_np_dtype, write_benchmark_log,
     read_benchmark_log)
@@ -29,6 +30,10 @@ fix_recursive_import()
 
 DUMMY_WEIGHT = "_DUMMY_"  # Use dummy weights for benchmark purposes
 
+class WeightSchedulingPolicy(enum.Enum):
+    BASELINE = enum.auto()
+    SMALLEST_FIRST_GPU_CPU_DISK = enum.auto()
+    LARGEST_FIRST_GPU_CPU_DISK = enum.auto()
 
 @dataclasses.dataclass(frozen=True)
 class Policy:
@@ -78,6 +83,30 @@ class Policy:
     def act_disk_percent(self):
         return 100 - self.act_gpu_percent - self.act_cpu_percent
 
+def get_weight_schedule(weight_specs, policy, env, scheduling_policy):
+    if scheduling_policy == WeightSchedulingPolicy.BASELINE:
+        dev_percents = [policy.w_disk_percent, policy.w_cpu_percent,
+                        policy.w_gpu_percent]
+        dev_choices = [env.disk, env.cpu, env.gpu]
+        weight_specs_sorted = weight_specs[:]
+
+    elif scheduling_policy == \
+        WeightSchedulingPolicy.SMALLEST_FIRST_GPU_CPU_DISK:
+        dev_percents = [policy.w_gpu_percent, policy.w_cpu_percent,
+                        policy.w_disk_percent]
+        dev_choices = [env.gpu, env.cpu, env.disk]
+        weight_specs_sorted = list(sorted(weight_specs,
+                                          key=lambda x: np.prod(x[0])))
+
+    elif scheduling_policy == WeightSchedulingPolicy.LARGEST_FIRST_GPU_CPU_DISK:
+        dev_percents = [policy.w_gpu_percent, policy.w_cpu_percent,
+                        policy.w_disk_percent]
+        dev_choices = [env.gpu, env.cpu, env.disk]
+        weight_specs_sorted = list(sorted(weight_specs,
+                                          key=lambda x: np.prod(x[0]),
+                                          reverse=True))
+
+    return dev_percents, dev_choices, weight_specs_sorted
 
 def get_choice(cur_percent, percents, choices):
     percents = np.cumsum(percents)
@@ -90,16 +119,29 @@ def get_choice(cur_percent, percents, choices):
 
 
 def init_weight_list(weight_specs, policy, env):
-    dev_percents = [policy.w_disk_percent, policy.w_cpu_percent, policy.w_gpu_percent]
-    dev_choices = [env.disk, env.cpu, env.gpu]
+    dev_percents, dev_choices, weight_specs_sorted = get_weight_schedule(
+        weight_specs, policy, env,
+        WeightSchedulingPolicy.LARGEST_FIRST_GPU_CPU_DISK)
 
-    sizes = [np.prod(spec[0]) for spec in weight_specs]
+    sizes = [np.prod(spec[0]) for spec in weight_specs_sorted]
     sizes_cumsum = np.cumsum(sizes)
-    ret = []
-    for i in range(len(weight_specs)):
+    weight_tensor = {}  # dict from weight path to weight tensor
+
+    for i in range(len(weight_specs_sorted)):
         mid_percent = (sizes_cumsum[i] - sizes[i] / 2) / sizes_cumsum[-1]
         home = get_choice(mid_percent * 100, dev_percents, dev_choices)
-        shape, dtype, filename = weight_specs[i]
+        shape, dtype, filename = weight_specs_sorted[i]
+
+        # SUDHANSHU
+        # print("[FlexGen] Allocating weight on ", end="")
+        # if home == env.disk:
+        #     print("disk. ", end="")
+        # elif home == env.cpu:
+        #     print("cpu. ", end="")
+        # elif home == env.gpu:
+        #     print("gpu. ", end="")
+        # print("Size = " + str(np.prod(shape) * np.dtype(dtype).itemsize) + \
+        #       " bytes", flush=True)
 
         if len(shape) < 2:
             pin_memory = True
@@ -112,7 +154,7 @@ def init_weight_list(weight_specs, policy, env):
             weight = home.allocate(shape, dtype, pin_memory=pin_memory)
 
             if DUMMY_WEIGHT not in filename:
-                weight.load_from_np_file(weight_specs[i][2])
+                weight.load_from_np_file(weight_specs_sorted[i][2])
             else:
                 weight.load_from_np(np.ones(shape, dtype))
                 #weight.load_from_np(np.random.rand(*shape).astype(dtype))
@@ -121,14 +163,15 @@ def init_weight_list(weight_specs, policy, env):
                 shape, dtype, policy.comp_weight_config, pin_memory=pin_memory)
 
             if DUMMY_WEIGHT not in filename:
-                weight.load_from_np_file(weight_specs[i][2])
+                weight.load_from_np_file(weight_specs_sorted[i][2])
             else:
                 for i in range(2):
                     x = weight.data[i]
                     x.load_from_np(np.ones(x.shape, torch_dtype_to_np_dtype[x.dtype]))
 
-        ret.append(weight)
-    return ret
+        weight_tensor[weight_specs_sorted[i][2]] = weight
+
+    return [weight_tensor[spec[2]] for spec in weight_specs]
 
 
 class InputEmbed:
@@ -593,17 +636,32 @@ class OptLM:
         self.policy = policy
         self.num_gpu_batches = policy.num_gpu_batches
 
+        # SUDHANSHU
+        # num_self_attention_layers = 0
+
         layers = []
         layers.append(InputEmbed(self.config, self.env, self.policy))
         for i in range(self.config.num_hidden_layers):
             if policy.sep_layer:
                 layers.append(SelfAttention(self.config, self.env, self.policy, i))
                 layers.append(MLP(self.config, self.env, self.policy, i))
+                # num_self_attention_layers += 1
             else:
                 layers.append(TransformerLayer(self.config, self.env, self.policy, i))
         layers.append(OutputEmbed(self.config, self.env, self.policy))
         self.layers = layers
         self.num_layers = len(layers)
+
+        # SUDHANSHU
+        # print("Number of self-attention layers = " + str(num_self_attention_layers))
+        # num_head, hidden_size, prompt_len, gen_len, gpu_batch_size = (
+        #     config.n_head, config.input_dim, 128, 256,
+        #     policy.gpu_batch_size)
+        # shape = (prompt_len + gen_len - 1, gpu_batch_size * num_head, hidden_size // num_head)
+        # import math
+        # print("Size (in bytes) = ", math.prod(shape) * 2)
+        # print("  prompt_len, gen_len, gpu_batch_size, num_head, hidden_size = ",
+        #       prompt_len, gen_len, gpu_batch_size, num_head, hidden_size)
 
         if self.policy.act_gpu_percent == 100:
             self.act_home = self.env.gpu
@@ -797,6 +855,9 @@ class OptLM:
     def init_all_weights(self):
         self.weight_home = array_1d(self.num_layers, ValueHolder)
         for j in range(self.num_layers):
+            # SUDHANSHU
+            # print("[FlexGen] Initializing layer " + str(j + 1) + "/" + \
+            #       str(self.num_layers), flush=True)
             self.init_weight(j)
 
     def delete_all_weights(self):
@@ -927,9 +988,6 @@ class OptLM:
             timers("generate").stop()
 
     def generation_loop_debug_normal(self):
-        execute_num_batches = 20
-        batch_ct = 0
-        pbar = tqdm(total=execute_num_batches)
         timers("prefill_total").reset()
         timers("decoding_gpu_batch").reset()
 
@@ -941,6 +999,8 @@ class OptLM:
         timers("compute_layer_prefill").reset()
         timers("compute_layer_decoding").reset()
         load_weight_timer = timers("load_weight")
+        # load_weight_timer = timers_ns("load_weight")
+        load_weight_timer.reset()
 
         for i in range(self.execute_gen_len):
             if i == 0:
@@ -964,6 +1024,13 @@ class OptLM:
                     self.load_weight(i, j, k)
                 load_weight_timer.stop(self.sync)
 
+                # SUDHANSHU
+                # Debug the costs of individual functions
+                print(f"load_weight (layer {j})"
+                    f": {load_weight_timer.costs[-1]:.6f} s", flush=True)
+                # print(f"load_weight (layer {j})"
+                #       f": {load_weight_timer.costs[-1]/1e9:.6f} s")
+
                 for k in range(self.num_gpu_batches):
                     load_cache_timer.start(self.sync)
                     self.load_cache(i, j, k)
@@ -979,10 +1046,6 @@ class OptLM:
 
                 if i > 0:
                     timers("decoding_gpu_batch").stop()
-                    pbar.update(1)
-                    batch_ct += 1
-                if batch_ct >= execute_num_batches: break
-            if batch_ct >= execute_num_batches: break
             if i == 0: timers("prefill_total").stop(self.sync)
 
         # Convert "decoding_gpu_batch" timer to "generate" timer
@@ -994,25 +1057,31 @@ class OptLM:
                 timers("generate").costs.append(self.num_layers * batch_cost)
 
         # Debug the costs of individual functions
-        print(f"#layers: {self.num_layers}")
+        print(f"#layers: {self.num_layers}", flush=True)
 
         print(f"#batches prefill:  "
-              f"{self.num_layers * self.num_gpu_batches}")
+              f"{self.num_layers * self.num_gpu_batches}", flush=True)
         print(f"#batches decoding: "
-              f"{(self.task.gen_len - 1) * self.num_layers * self.num_gpu_batches}")
+              f"{(self.task.gen_len - 1) * self.num_layers * self.num_gpu_batches}",
+              flush=True)
         print(f"load_weight            (per-layer)"
-              f": {np.mean(timers('load_weight').costs):.6f} s")
+              f": {np.mean(load_weight_timer.costs):.6f} s", flush=True)
+        # print(f"load_weight            (per-layer)"
+        #       f": {np.mean(load_weight_timer.costs)/1e9:.6f} s")
         for stage in ["prefill", "decoding"]:
             for func in ["load_cache", "store_cache", "compute_layer"]:
                 name = func + "_" + stage
                 costs = timers(name).costs
-                print(f"{name:22s} (per-batch): {np.mean(costs):.6f} s")
+                print(f"{name:22s} (per-batch): {np.mean(costs):.6f} s",
+                      flush=True)
 
     def generation_loop_overlap_single_batch(self):
         # Prologue
         for k in range(self.num_gpu_batches):
             self.load_weight(0, 0, k)
         self.sync()
+
+        timers("generate").reset()
 
         # Generate
         for i in range(self.execute_gen_len):
@@ -1027,6 +1096,9 @@ class OptLM:
                 self.store_hidden(i, j, 0)
                 self.sync()
             timers("generate").stop()
+
+            print("generate (token " + str(i) + "): " + \
+                  str(timers("generate").costs[-1]) + " s", flush=True)
 
             if self.task.stop and np.all(self.stopped):
                 break
@@ -1053,6 +1125,9 @@ class OptLM:
                     self.store_cache(i, j, k-1)
                     self.sync()
             timers("generate").stop()
+
+            print("generate (token " + str(i) + "): " + \
+                  str(timers("generate").costs[-1]) + " s", flush=True)
 
         # Epilogue
         self.store_hidden(
@@ -1176,8 +1251,8 @@ def get_test_inputs(prompt_len, num_prompts, tokenizer):
     return (input_ids[0],) * num_prompts
 
 
-def run_flexllmgen(args):
-    print(f"<run_flexllmgen>: args.model: {args.model}")
+def run_flexgen(args):
+    print(f"<run_flexgen>: args.model: {args.model}")
     if args.model == "facebook/galactica-30b":
         tokenizer = AutoTokenizer.from_pretrained("facebook/galactica-30b", padding_side="left")
     else:
@@ -1277,8 +1352,8 @@ def add_parser_arguments(parser):
         help="The model name.")
     parser.add_argument("--path", type=str, default="~/opt_weights",
         help="The path to the model weights. If there are no cached weights, "
-             "FlexLLMGen will automatically download them from HuggingFace.")
-    parser.add_argument("--offload-dir", type=str, default="~/flexllmgen_offload_dir",
+             "FlexGen will automatically download them from HuggingFace.")
+    parser.add_argument("--offload-dir", type=str, default="~/flexgen_offload_dir",
         help="The directory to offload tensors. ")
     parser.add_argument("--prompt-len", type=int, default=512)
     parser.add_argument("--gen-len", type=int, default=32)
@@ -1324,4 +1399,4 @@ if __name__ == "__main__":
 
     assert len(args.percent) == 6
 
-    run_flexllmgen(args)
+    run_flexgen(args)

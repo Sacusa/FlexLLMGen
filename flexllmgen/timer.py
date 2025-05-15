@@ -7,7 +7,7 @@ from typing import Callable, Any
 class _Timer:
     """An internal timer."""
 
-    def __init__(self, name: str):
+    def __init__(self, name: str, res_ns: bool):
         self.name = name
         self.started = False
         self.start_time = None
@@ -17,13 +17,18 @@ class _Timer:
         self.stop_times = []
         self.costs = []
 
+        if res_ns:
+            self.timer_func = time.perf_counter_ns
+        else:
+            self.timer_func = time.perf_counter
+
     def start(self, sync_func: Callable = None):
         """Start the timer."""
         assert not self.started, f"timer {self.name} has already been started."
         if sync_func:
             sync_func()
 
-        self.start_time = time.perf_counter()
+        self.start_time = self.timer_func()
         self.start_times.append(self.start_time)
         self.started = True
 
@@ -33,7 +38,7 @@ class _Timer:
         if sync_func:
             sync_func()
 
-        stop_time = time.perf_counter()
+        stop_time = self.timer_func()
         self.costs.append(stop_time - self.start_time)
         self.stop_times.append(stop_time)
         self.started = False
@@ -66,7 +71,21 @@ class Timers:
 
     def __call__(self, name: str):
         if name not in self.timers:
-            self.timers[name] = _Timer(name)
+            self.timers[name] = _Timer(name, False)
+        return self.timers[name]
+
+    def __contains__(self, name: str):
+        return name in self.timers
+
+class TimersNS:
+    """A group of timers."""
+
+    def __init__(self):
+        self.timers = {}
+
+    def __call__(self, name: str):
+        if name not in self.timers:
+            self.timers[name] = _Timer(name, True)
         return self.timers[name]
 
     def __contains__(self, name: str):
@@ -74,6 +93,7 @@ class Timers:
 
 
 timers = Timers()
+timers_ns = TimersNS()
 
 Event = namedtuple("Event", ("tstamp", "name", "info"))
 
