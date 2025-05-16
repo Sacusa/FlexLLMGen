@@ -34,6 +34,7 @@ class WeightSchedulingPolicy(enum.Enum):
     BASELINE = enum.auto()
     SMALLEST_FIRST_GPU_CPU_DISK = enum.auto()
     LARGEST_FIRST_GPU_CPU_DISK = enum.auto()
+    MLP_FOCUSED = enum.auto()
 
 @dataclasses.dataclass(frozen=True)
 class Policy:
@@ -83,6 +84,9 @@ class Policy:
     def act_disk_percent(self):
         return 100 - self.act_gpu_percent - self.act_cpu_percent
 
+num_mlp_on_gpu = 0
+max_mlp_on_gpu = 28
+
 def get_weight_schedule(weight_specs, policy, env, scheduling_policy):
     if scheduling_policy == WeightSchedulingPolicy.BASELINE:
         dev_percents = [policy.w_disk_percent, policy.w_cpu_percent,
@@ -106,6 +110,26 @@ def get_weight_schedule(weight_specs, policy, env, scheduling_policy):
                                           key=lambda x: np.prod(x[0]),
                                           reverse=True))
 
+    elif scheduling_policy == WeightSchedulingPolicy.MLP_FOCUSED:
+        # Default is SMALLEST_FIRST_GPU_CPU_DISK
+        dev_percents = [policy.w_gpu_percent, policy.w_cpu_percent,
+                        policy.w_disk_percent]
+        dev_choices = [env.gpu, env.cpu, env.disk]
+        weight_specs_sorted = list(sorted(weight_specs,
+                                          key=lambda x: np.prod(x[0])))
+
+        # For the first 32 MLP layers, map the larger weights to GPU
+        is_mlp = len(weight_specs) == 6
+        is_attention = len(weight_specs) == 10
+        if is_mlp:
+            global num_mlp_on_gpu
+            if num_mlp_on_gpu < max_mlp_on_gpu:
+                dev_percents = [30, 70, 0]
+            num_mlp_on_gpu += 1
+
+        elif is_attention:
+            dev_percents = [10, 90, 0]
+
     return dev_percents, dev_choices, weight_specs_sorted
 
 def get_choice(cur_percent, percents, choices):
@@ -121,7 +145,7 @@ def get_choice(cur_percent, percents, choices):
 def init_weight_list(weight_specs, policy, env):
     dev_percents, dev_choices, weight_specs_sorted = get_weight_schedule(
         weight_specs, policy, env,
-        WeightSchedulingPolicy.LARGEST_FIRST_GPU_CPU_DISK)
+        WeightSchedulingPolicy.MLP_FOCUSED)
 
     sizes = [np.prod(spec[0]) for spec in weight_specs_sorted]
     sizes_cumsum = np.cumsum(sizes)
@@ -133,15 +157,15 @@ def init_weight_list(weight_specs, policy, env):
         shape, dtype, filename = weight_specs_sorted[i]
 
         # SUDHANSHU
-        # print("[FlexGen] Allocating weight on ", end="")
-        # if home == env.disk:
-        #     print("disk. ", end="")
-        # elif home == env.cpu:
-        #     print("cpu. ", end="")
-        # elif home == env.gpu:
-        #     print("gpu. ", end="")
-        # print("Size = " + str(np.prod(shape) * np.dtype(dtype).itemsize) + \
-        #       " bytes", flush=True)
+        print("[FlexGen] Allocating weight on ", end="")
+        if home == env.disk:
+            print("disk. ", end="")
+        elif home == env.cpu:
+            print("cpu. ", end="")
+        elif home == env.gpu:
+            print("gpu. ", end="")
+        print("Size = " + str(np.prod(shape) * np.dtype(dtype).itemsize) + \
+              " bytes", flush=True)
 
         if len(shape) < 2:
             pin_memory = True
@@ -856,8 +880,8 @@ class OptLM:
         self.weight_home = array_1d(self.num_layers, ValueHolder)
         for j in range(self.num_layers):
             # SUDHANSHU
-            # print("[FlexGen] Initializing layer " + str(j + 1) + "/" + \
-            #       str(self.num_layers), flush=True)
+            print("[FlexGen] Initializing layer " + str(j + 1) + "/" + \
+                  str(self.num_layers), flush=True)
             self.init_weight(j)
 
     def delete_all_weights(self):
