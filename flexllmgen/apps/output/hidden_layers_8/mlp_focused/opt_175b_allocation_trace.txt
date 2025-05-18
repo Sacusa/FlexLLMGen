@@ -1,0 +1,171 @@
+opt-175b,ssd/na,nvm/na,dram/memory,gpu/dma
+Instance 0
+[FlexGen] NUMA Memory Utilization
+[FlexGen] == Node 0: 13180768256/134586421248 (9.79%)
+[FlexGen] == Node 1: 11254439936/135269498880 (8.32%)
+[FlexGen] == Node 2: 106954752/532575944704 (0.02%)
+[FlexGen] == Node 3: 32518144/532575944704 (0.01%)
+[FlexGen] Initialize
+[FlexGen] Initializing layer 1/18
+[FlexGen] Allocating weight on gpu. Size = 50380800 bytes
+[FlexGen] Allocating weight on cpu. Size = 1235484672 bytes
+[FlexGen] Initializing layer 2/18
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Initializing layer 3/18
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 98304 bytes
+[FlexGen] Allocating weight on gpu. Size = 1207959552 bytes
+[FlexGen] Allocating weight on cpu. Size = 1207959552 bytes
+[FlexGen] Initializing layer 4/18
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Initializing layer 5/18
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 98304 bytes
+[FlexGen] Allocating weight on gpu. Size = 1207959552 bytes
+[FlexGen] Allocating weight on cpu. Size = 1207959552 bytes
+[FlexGen] Initializing layer 6/18
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Initializing layer 7/18
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 98304 bytes
+[FlexGen] Allocating weight on gpu. Size = 1207959552 bytes
+[FlexGen] Allocating weight on cpu. Size = 1207959552 bytes
+[FlexGen] Initializing layer 8/18
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Initializing layer 9/18
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 98304 bytes
+[FlexGen] Allocating weight on gpu. Size = 1207959552 bytes
+[FlexGen] Allocating weight on cpu. Size = 1207959552 bytes
+[FlexGen] Initializing layer 10/18
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Initializing layer 11/18
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 98304 bytes
+[FlexGen] Allocating weight on gpu. Size = 1207959552 bytes
+[FlexGen] Allocating weight on cpu. Size = 1207959552 bytes
+[FlexGen] Initializing layer 12/18
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Initializing layer 13/18
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 98304 bytes
+[FlexGen] Allocating weight on gpu. Size = 1207959552 bytes
+[FlexGen] Allocating weight on cpu. Size = 1207959552 bytes
+[FlexGen] Initializing layer 14/18
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Initializing layer 15/18
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 98304 bytes
+[FlexGen] Allocating weight on gpu. Size = 1207959552 bytes
+[FlexGen] Allocating weight on cpu. Size = 1207959552 bytes
+[FlexGen] Initializing layer 16/18
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Allocating weight on cpu. Size = 301989888 bytes
+[FlexGen] Initializing layer 17/18
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 98304 bytes
+[FlexGen] Allocating weight on gpu. Size = 1207959552 bytes
+[FlexGen] Allocating weight on cpu. Size = 1207959552 bytes
+[FlexGen] Initializing layer 18/18
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on gpu. Size = 24576 bytes
+[FlexGen] Allocating weight on cpu. Size = 1235484672 bytes
+[FlexGen] Generate
+[FlexGen] NUMA Memory Utilization
+[FlexGen] == Node 0: 13175615488/134586421248 (9.79%)
+[FlexGen] == Node 1: 90241470464/135269498880 (66.71%)
+[FlexGen] == Node 2: 106954752/532575944704 (0.02%)
+[FlexGen] == Node 3: 32292864/532575944704 (0.01%)
+[FlexGen] Shutdown
+[FlexGen] NUMA Memory Utilization
+[FlexGen] == Node 0: 13175132160/134586421248 (9.79%)
+[FlexGen] == Node 1: 90643394560/135269498880 (67.01%)
+[FlexGen] == Node 2: 106954752/532575944704 (0.02%)
+[FlexGen] == Node 3: 32292864/532575944704 (0.01%)

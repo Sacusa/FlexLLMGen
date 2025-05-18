@@ -1,0 +1,94 @@
+opt-175b,ssd/na,nvm/memory,dram/na,gpu/dma
+Instance 0
+[FlexGen] NUMA Memory Utilization
+[FlexGen] == Node 0: 12957286400/134586421248 (9.63%)
+[FlexGen] == Node 1: 11413934080/135269498880 (8.44%)
+[FlexGen] == Node 2: 2421739520/532575944704 (0.45%)
+[FlexGen] == Node 3: 18269466624/532575944704 (3.43%)
+[FlexGen] Initialize
+Layer 0: InputEmbed
+Layer 1: SelfAttention
+Layer 2: MLP
+Layer 3: SelfAttention
+Layer 4: MLP
+Layer 5: SelfAttention
+Layer 6: MLP
+Layer 7: SelfAttention
+Layer 8: MLP
+Layer 9: SelfAttention
+Layer 10: MLP
+Layer 11: SelfAttention
+Layer 12: MLP
+Layer 13: SelfAttention
+Layer 14: MLP
+Layer 15: SelfAttention
+Layer 16: MLP
+Layer 17: SelfAttention
+Layer 18: MLP
+Layer 19: SelfAttention
+Layer 20: MLP
+Layer 21: SelfAttention
+Layer 22: MLP
+Layer 23: SelfAttention
+Layer 24: MLP
+Layer 25: SelfAttention
+Layer 26: MLP
+Layer 27: SelfAttention
+Layer 28: MLP
+Layer 29: SelfAttention
+Layer 30: MLP
+Layer 31: SelfAttention
+Layer 32: MLP
+Layer 33: SelfAttention
+Layer 34: MLP
+Layer 35: SelfAttention
+Layer 36: MLP
+Layer 37: SelfAttention
+Layer 38: MLP
+Layer 39: SelfAttention
+Layer 40: MLP
+Layer 41: SelfAttention
+Layer 42: MLP
+Layer 43: SelfAttention
+Layer 44: MLP
+Layer 45: SelfAttention
+Layer 46: MLP
+Layer 47: SelfAttention
+Layer 48: MLP
+Layer 49: SelfAttention
+Layer 50: MLP
+Layer 51: SelfAttention
+Layer 52: MLP
+Layer 53: SelfAttention
+Layer 54: MLP
+Layer 55: SelfAttention
+Layer 56: MLP
+Layer 57: SelfAttention
+Layer 58: MLP
+Layer 59: SelfAttention
+Layer 60: MLP
+Layer 61: SelfAttention
+Layer 62: MLP
+Layer 63: SelfAttention
+Layer 64: MLP
+Layer 65: SelfAttention
+Layer 66: MLP
+Layer 67: SelfAttention
+Layer 68: MLP
+Layer 69: SelfAttention
+Layer 70: MLP
+Layer 71: SelfAttention
+Layer 72: MLP
+Layer 73: SelfAttention
+Layer 74: MLP
+Layer 75: SelfAttention
+Layer 76: MLP
+Layer 77: SelfAttention
+Layer 78: MLP
+Layer 79: SelfAttention
+Layer 80: MLP
+Layer 81: SelfAttention
+Layer 82: MLP
+Layer 83: SelfAttention
+Layer 84: MLP
+Layer 85: SelfAttention

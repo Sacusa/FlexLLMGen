@@ -1,0 +1,980 @@
+opt-175b,ssd/na,nvm/na,dram/memory,gpu/dma
+Instance 0
+[FlexGen] NUMA Memory Utilization
+[FlexGen] == Node 0: 13173686272/134586421248 (9.79%)
+[FlexGen] == Node 1: 11239669760/135269498880 (8.31%)
+[FlexGen] == Node 2: 106954752/532575944704 (0.02%)
+[FlexGen] == Node 3: 32292864/532575944704 (0.01%)
+[FlexGen] Initialize
+[FlexGen] Generate
+[FlexGen] NUMA Memory Utilization
+[FlexGen] == Node 0: 13219577856/134586421248 (9.82%)
+[FlexGen] == Node 1: 63076364288/135269498880 (46.63%)
+[FlexGen] == Node 2: 106954752/532575944704 (0.02%)
+[FlexGen] == Node 3: 32292864/532575944704 (0.01%)
+load_weight (layer 0): 0.018181 s
+load_weight (layer 1): 0.017264 s
+load_weight (layer 2): 0.017221 s
+load_weight (layer 3): 0.017185 s
+load_weight (layer 4): 0.017141 s
+load_weight (layer 5): 0.017166 s
+load_weight (layer 6): 0.013685 s
+load_weight (layer 7): 0.013698 s
+load_weight (layer 8): 0.013684 s
+load_weight (layer 9): 0.013697 s
+load_weight (layer 10): 0.013686 s
+load_weight (layer 11): 0.013706 s
+load_weight (layer 12): 0.013680 s
+load_weight (layer 13): 0.013699 s
+load_weight (layer 14): 0.013689 s
+load_weight (layer 15): 0.013708 s
+load_weight (layer 16): 0.013688 s
+load_weight (layer 17): 0.014069 s
+load_weight (layer 0): 0.014044 s
+load_weight (layer 1): 0.013723 s
+load_weight (layer 2): 0.013710 s
+load_weight (layer 3): 0.013721 s
+load_weight (layer 4): 0.013706 s
+load_weight (layer 5): 0.013705 s
+load_weight (layer 6): 0.013687 s
+load_weight (layer 7): 0.013701 s
+load_weight (layer 8): 0.013688 s
+load_weight (layer 9): 0.013709 s
+load_weight (layer 10): 0.013691 s
+load_weight (layer 11): 0.013702 s
+load_weight (layer 12): 0.013688 s
+load_weight (layer 13): 0.013700 s
+load_weight (layer 14): 0.013693 s
+load_weight (layer 15): 0.013709 s
+load_weight (layer 16): 0.013694 s
+load_weight (layer 17): 0.014001 s
+#layers: 18
+#batches prefill:  18
+#batches decoding: 18
+load_weight            (per-layer): 0.014337 s
+load_cache_prefill     (per-batch): 0.000014 s
+store_cache_prefill    (per-batch): 0.000077 s
+compute_layer_prefill  (per-batch): 0.026875 s
+load_cache_decoding    (per-batch): 0.000043 s
+store_cache_decoding   (per-batch): 0.000017 s
+compute_layer_decoding (per-batch): 0.017700 s
+Throughput (0, 0) = 20/1327180976 tokens/ns
+load_weight (layer 0): 0.014010 s
+load_weight (layer 1): 0.013703 s
+load_weight (layer 2): 0.013680 s
+load_weight (layer 3): 0.013695 s
+load_weight (layer 4): 0.013688 s
+load_weight (layer 5): 0.013700 s
+load_weight (layer 6): 0.013676 s
+load_weight (layer 7): 0.013696 s
+load_weight (layer 8): 0.013676 s
+load_weight (layer 9): 0.013700 s
+load_weight (layer 10): 0.013675 s
+load_weight (layer 11): 0.013705 s
+load_weight (layer 12): 0.013675 s
+load_weight (layer 13): 0.013695 s
+load_weight (layer 14): 0.013674 s
+load_weight (layer 15): 0.013698 s
+load_weight (layer 16): 0.013677 s
+load_weight (layer 17): 0.013994 s
+load_weight (layer 0): 0.013990 s
+load_weight (layer 1): 0.013700 s
+load_weight (layer 2): 0.013691 s
+load_weight (layer 3): 0.013703 s
+load_weight (layer 4): 0.013688 s
+load_weight (layer 5): 0.013700 s
+load_weight (layer 6): 0.013683 s
+load_weight (layer 7): 0.013710 s
+load_weight (layer 8): 0.013685 s
+load_weight (layer 9): 0.013703 s
+load_weight (layer 10): 0.013685 s
+load_weight (layer 11): 0.013700 s
+load_weight (layer 12): 0.013684 s
+load_weight (layer 13): 0.013702 s
+load_weight (layer 14): 0.013681 s
+load_weight (layer 15): 0.013706 s
+load_weight (layer 16): 0.013686 s
+load_weight (layer 17): 0.013995 s
+#layers: 18
+#batches prefill:  18
+#batches decoding: 18
+load_weight            (per-layer): 0.013725 s
+load_cache_prefill     (per-batch): 0.000013 s
+store_cache_prefill    (per-batch): 0.000071 s
+compute_layer_prefill  (per-batch): 0.017862 s
+load_cache_decoding    (per-batch): 0.000041 s
+store_cache_decoding   (per-batch): 0.000016 s
+compute_layer_decoding (per-batch): 0.017662 s
+Throughput (0, 1) = 20/1139736389 tokens/ns
+load_weight (layer 0): 0.014001 s
+load_weight (layer 1): 0.013701 s
+load_weight (layer 2): 0.013680 s
+load_weight (layer 3): 0.013703 s
+load_weight (layer 4): 0.013684 s
+load_weight (layer 5): 0.013697 s
+load_weight (layer 6): 0.013676 s
+load_weight (layer 7): 0.013694 s
+load_weight (layer 8): 0.013682 s
+load_weight (layer 9): 0.013698 s
+load_weight (layer 10): 0.013679 s
+load_weight (layer 11): 0.013703 s
+load_weight (layer 12): 0.013675 s
+load_weight (layer 13): 0.013699 s
+load_weight (layer 14): 0.013676 s
+load_weight (layer 15): 0.013694 s
+load_weight (layer 16): 0.013675 s
+load_weight (layer 17): 0.013992 s
+load_weight (layer 0): 0.013994 s
+load_weight (layer 1): 0.013699 s
+load_weight (layer 2): 0.013688 s
+load_weight (layer 3): 0.013702 s
+load_weight (layer 4): 0.013692 s
+load_weight (layer 5): 0.013703 s
+load_weight (layer 6): 0.013687 s
+load_weight (layer 7): 0.013701 s
+load_weight (layer 8): 0.013685 s
+load_weight (layer 9): 0.013706 s
+load_weight (layer 10): 0.014741 s
+load_weight (layer 11): 0.013700 s
+load_weight (layer 12): 0.013684 s
+load_weight (layer 13): 0.013703 s
+load_weight (layer 14): 0.013685 s
+load_weight (layer 15): 0.013706 s
+load_weight (layer 16): 0.013685 s
+load_weight (layer 17): 0.013994 s
+#layers: 18
+#batches prefill:  18
+#batches decoding: 18
+load_weight            (per-layer): 0.013754 s
+load_cache_prefill     (per-batch): 0.000013 s
+store_cache_prefill    (per-batch): 0.000075 s
+compute_layer_prefill  (per-batch): 0.017875 s
+load_cache_decoding    (per-batch): 0.000040 s
+store_cache_decoding   (per-batch): 0.000016 s
+compute_layer_decoding (per-batch): 0.017693 s
+Throughput (0, 2) = 19/1141555682 tokens/ns
+load_weight (layer 0): 0.013999 s
+load_weight (layer 1): 0.013699 s
+load_weight (layer 2): 0.013678 s
+load_weight (layer 3): 0.013697 s
+load_weight (layer 4): 0.013689 s
+load_weight (layer 5): 0.013717 s
+load_weight (layer 6): 0.013677 s
+load_weight (layer 7): 0.013696 s
+load_weight (layer 8): 0.013675 s
+load_weight (layer 9): 0.013697 s
+load_weight (layer 10): 0.013675 s
+load_weight (layer 11): 0.013704 s
+load_weight (layer 12): 0.013678 s
+load_weight (layer 13): 0.013695 s
+load_weight (layer 14): 0.013679 s
+load_weight (layer 15): 0.013696 s
+load_weight (layer 16): 0.013677 s
+load_weight (layer 17): 0.013992 s
+load_weight (layer 0): 0.013994 s
+load_weight (layer 1): 0.013706 s
+load_weight (layer 2): 0.013688 s
+load_weight (layer 3): 0.013702 s
+load_weight (layer 4): 0.013684 s
+load_weight (layer 5): 0.013700 s
+load_weight (layer 6): 0.013690 s
+load_weight (layer 7): 0.013702 s
+load_weight (layer 8): 0.013686 s
+load_weight (layer 9): 0.013702 s
+load_weight (layer 10): 0.013691 s
+load_weight (layer 11): 0.013702 s
+load_weight (layer 12): 0.013684 s
+load_weight (layer 13): 0.013700 s
+load_weight (layer 14): 0.013684 s
+load_weight (layer 15): 0.013714 s
+load_weight (layer 16): 0.013692 s
+load_weight (layer 17): 0.013998 s
+#layers: 18
+#batches prefill:  18
+#batches decoding: 18
+load_weight            (per-layer): 0.013726 s
+load_cache_prefill     (per-batch): 0.000013 s
+store_cache_prefill    (per-batch): 0.000071 s
+compute_layer_prefill  (per-batch): 0.017837 s
+load_cache_decoding    (per-batch): 0.000041 s
+store_cache_decoding   (per-batch): 0.000016 s
+compute_layer_decoding (per-batch): 0.017674 s
+Throughput (0, 3) = 20/1139403931 tokens/ns
+load_weight (layer 0): 0.014001 s
+load_weight (layer 1): 0.013702 s
+load_weight (layer 2): 0.013680 s
+load_weight (layer 3): 0.013703 s
+load_weight (layer 4): 0.013679 s
+load_weight (layer 5): 0.013695 s
+load_weight (layer 6): 0.013674 s
+load_weight (layer 7): 0.013694 s
+load_weight (layer 8): 0.013680 s
+load_weight (layer 9): 0.013700 s
+load_weight (layer 10): 0.013676 s
+load_weight (layer 11): 0.013702 s
+load_weight (layer 12): 0.013675 s
+load_weight (layer 13): 0.013695 s
+load_weight (layer 14): 0.013686 s
+load_weight (layer 15): 0.013701 s
+load_weight (layer 16): 0.013677 s
+load_weight (layer 17): 0.013992 s
+load_weight (layer 0): 0.014002 s
+load_weight (layer 1): 0.013707 s
+load_weight (layer 2): 0.013700 s
+load_weight (layer 3): 0.013706 s
+load_weight (layer 4): 0.013687 s
+load_weight (layer 5): 0.013701 s
+load_weight (layer 6): 0.013685 s
+load_weight (layer 7): 0.013761 s
+load_weight (layer 8): 0.013689 s
+load_weight (layer 9): 0.013701 s
+load_weight (layer 10): 0.013683 s
+load_weight (layer 11): 0.013698 s
+load_weight (layer 12): 0.013684 s
+load_weight (layer 13): 0.013699 s
+load_weight (layer 14): 0.013684 s
+load_weight (layer 15): 0.013714 s
+load_weight (layer 16): 0.013688 s
+load_weight (layer 17): 0.013997 s
+#layers: 18
+#batches prefill:  18
+#batches decoding: 18
+load_weight            (per-layer): 0.013728 s
+load_cache_prefill     (per-batch): 0.000013 s
+store_cache_prefill    (per-batch): 0.000071 s
+compute_layer_prefill  (per-batch): 0.017857 s
+load_cache_decoding    (per-batch): 0.000040 s
+store_cache_decoding   (per-batch): 0.000016 s
+compute_layer_decoding (per-batch): 0.017668 s
+Throughput (0, 4) = 20/1139666905 tokens/ns
+load_weight (layer 0): 0.014008 s
+load_weight (layer 1): 0.013700 s
+load_weight (layer 2): 0.013678 s
+load_weight (layer 3): 0.013696 s
+load_weight (layer 4): 0.013689 s
+load_weight (layer 5): 0.013698 s
+load_weight (layer 6): 0.013676 s
+load_weight (layer 7): 0.013701 s
+load_weight (layer 8): 0.013675 s
+load_weight (layer 9): 0.013696 s
+load_weight (layer 10): 0.013677 s
+load_weight (layer 11): 0.013702 s
+load_weight (layer 12): 0.013678 s
+load_weight (layer 13): 0.013696 s
+load_weight (layer 14): 0.013676 s
+load_weight (layer 15): 0.013693 s
+load_weight (layer 16): 0.013678 s
+load_weight (layer 17): 0.013992 s
+load_weight (layer 0): 0.014000 s
+load_weight (layer 1): 0.013709 s
+load_weight (layer 2): 0.013686 s
+load_weight (layer 3): 0.013702 s
+load_weight (layer 4): 0.013690 s
+load_weight (layer 5): 0.013700 s
+load_weight (layer 6): 0.013685 s
+load_weight (layer 7): 0.013700 s
+load_weight (layer 8): 0.013685 s
+load_weight (layer 9): 0.013706 s
+load_weight (layer 10): 0.013686 s
+load_weight (layer 11): 0.013699 s
+load_weight (layer 12): 0.013689 s
+load_weight (layer 13): 0.013702 s
+load_weight (layer 14): 0.013683 s
+load_weight (layer 15): 0.013713 s
+load_weight (layer 16): 0.013684 s
+load_weight (layer 17): 0.013997 s
+#layers: 18
+#batches prefill:  18
+#batches decoding: 18
+load_weight            (per-layer): 0.013726 s
+load_cache_prefill     (per-batch): 0.000013 s
+store_cache_prefill    (per-batch): 0.000070 s
+compute_layer_prefill  (per-batch): 0.017887 s
+load_cache_decoding    (per-batch): 0.000041 s
+store_cache_decoding   (per-batch): 0.000016 s
+compute_layer_decoding (per-batch): 0.017669 s
+Throughput (0, 5) = 20/1140124307 tokens/ns
+load_weight (layer 0): 0.014000 s
+load_weight (layer 1): 0.013700 s
+load_weight (layer 2): 0.013677 s
+load_weight (layer 3): 0.013702 s
+load_weight (layer 4): 0.013689 s
+load_weight (layer 5): 0.013703 s
+load_weight (layer 6): 0.013675 s
+load_weight (layer 7): 0.013696 s
+load_weight (layer 8): 0.013672 s
+load_weight (layer 9): 0.013693 s
+load_weight (layer 10): 0.013683 s
+load_weight (layer 11): 0.013706 s
+load_weight (layer 12): 0.013682 s
+load_weight (layer 13): 0.013696 s
+load_weight (layer 14): 0.013676 s
+load_weight (layer 15): 0.013695 s
+load_weight (layer 16): 0.013676 s
+load_weight (layer 17): 0.013990 s
+load_weight (layer 0): 0.013998 s
+load_weight (layer 1): 0.013707 s
+load_weight (layer 2): 0.013688 s
+load_weight (layer 3): 0.013701 s
+load_weight (layer 4): 0.013692 s
+load_weight (layer 5): 0.013703 s
+load_weight (layer 6): 0.013685 s
+load_weight (layer 7): 0.013699 s
+load_weight (layer 8): 0.013689 s
+load_weight (layer 9): 0.013701 s
+load_weight (layer 10): 0.013687 s
+load_weight (layer 11): 0.013697 s
+load_weight (layer 12): 0.013682 s
+load_weight (layer 13): 0.013698 s
+load_weight (layer 14): 0.013684 s
+load_weight (layer 15): 0.013708 s
+load_weight (layer 16): 0.013684 s
+load_weight (layer 17): 0.014002 s
+#layers: 18
+#batches prefill:  18
+#batches decoding: 18
+load_weight            (per-layer): 0.013726 s
+load_cache_prefill     (per-batch): 0.000013 s
+store_cache_prefill    (per-batch): 0.000071 s
+compute_layer_prefill  (per-batch): 0.017834 s
+load_cache_decoding    (per-batch): 0.000040 s
+store_cache_decoding   (per-batch): 0.000016 s
+compute_layer_decoding (per-batch): 0.017662 s
+Throughput (0, 6) = 19/1139051877 tokens/ns
+load_weight (layer 0): 0.014000 s
+load_weight (layer 1): 0.013699 s
+load_weight (layer 2): 0.013688 s
+load_weight (layer 3): 0.013703 s
+load_weight (layer 4): 0.013677 s
+load_weight (layer 5): 0.013695 s
+load_weight (layer 6): 0.013677 s
+load_weight (layer 7): 0.013695 s
+load_weight (layer 8): 0.013676 s
+load_weight (layer 9): 0.013694 s
+load_weight (layer 10): 0.013682 s
+load_weight (layer 11): 0.013707 s
+load_weight (layer 12): 0.013675 s
+load_weight (layer 13): 0.013699 s
+load_weight (layer 14): 0.013673 s
+load_weight (layer 15): 0.013695 s
+load_weight (layer 16): 0.013676 s
+load_weight (layer 17): 0.013990 s
+load_weight (layer 0): 0.013988 s
+load_weight (layer 1): 0.013714 s
+load_weight (layer 2): 0.013691 s
+load_weight (layer 3): 0.013700 s
+load_weight (layer 4): 0.013685 s
+load_weight (layer 5): 0.013701 s
+load_weight (layer 6): 0.013683 s
+load_weight (layer 7): 0.013706 s
+load_weight (layer 8): 0.013696 s
+load_weight (layer 9): 0.013702 s
+load_weight (layer 10): 0.013684 s
+load_weight (layer 11): 0.013701 s
+load_weight (layer 12): 0.013686 s
+load_weight (layer 13): 0.013700 s
+load_weight (layer 14): 0.013689 s
+load_weight (layer 15): 0.013710 s
+load_weight (layer 16): 0.013685 s
+load_weight (layer 17): 0.013997 s
+#layers: 18
+#batches prefill:  18
+#batches decoding: 18
+load_weight            (per-layer): 0.013725 s
+load_cache_prefill     (per-batch): 0.000013 s
+store_cache_prefill    (per-batch): 0.000070 s
+compute_layer_prefill  (per-batch): 0.017851 s
+load_cache_decoding    (per-batch): 0.000040 s
+store_cache_decoding   (per-batch): 0.000016 s
+compute_layer_decoding (per-batch): 0.017661 s
+Throughput (0, 7) = 19/1139320610 tokens/ns
+load_weight (layer 0): 0.014002 s
+load_weight (layer 1): 0.013700 s
+load_weight (layer 2): 0.013681 s
+load_weight (layer 3): 0.013697 s
+load_weight (layer 4): 0.013688 s
+load_weight (layer 5): 0.013699 s
+load_weight (layer 6): 0.013677 s
+load_weight (layer 7): 0.013699 s
+load_weight (layer 8): 0.013679 s
+load_weight (layer 9): 0.013700 s
+load_weight (layer 10): 0.013677 s
+load_weight (layer 11): 0.013768 s
+load_weight (layer 12): 0.013674 s
+load_weight (layer 13): 0.013693 s
+load_weight (layer 14): 0.013681 s
+load_weight (layer 15): 0.013699 s
+load_weight (layer 16): 0.013677 s
+load_weight (layer 17): 0.013993 s
+load_weight (layer 0): 0.013999 s
+load_weight (layer 1): 0.013712 s
+load_weight (layer 2): 0.013689 s
+load_weight (layer 3): 0.013701 s
+load_weight (layer 4): 0.013695 s
+load_weight (layer 5): 0.013701 s
+load_weight (layer 6): 0.013685 s
+load_weight (layer 7): 0.013700 s
+load_weight (layer 8): 0.013691 s
+load_weight (layer 9): 0.013705 s
+load_weight (layer 10): 0.013685 s
+load_weight (layer 11): 0.013698 s
+load_weight (layer 12): 0.013684 s
+load_weight (layer 13): 0.013698 s
+load_weight (layer 14): 0.013686 s
+load_weight (layer 15): 0.013705 s
+load_weight (layer 16): 0.013682 s
+load_weight (layer 17): 0.013997 s
+#layers: 18
+#batches prefill:  18
+#batches decoding: 18
+load_weight            (per-layer): 0.013728 s
+load_cache_prefill     (per-batch): 0.000013 s
+store_cache_prefill    (per-batch): 0.000070 s
+compute_layer_prefill  (per-batch): 0.017848 s
+load_cache_decoding    (per-batch): 0.000040 s
+store_cache_decoding   (per-batch): 0.000016 s
+compute_layer_decoding (per-batch): 0.017662 s
+Throughput (0, 8) = 20/1139355361 tokens/ns
+load_weight (layer 0): 0.014000 s
+load_weight (layer 1): 0.013700 s
+load_weight (layer 2): 0.013678 s
+load_weight (layer 3): 0.013698 s
+load_weight (layer 4): 0.013682 s
+load_weight (layer 5): 0.013698 s
+load_weight (layer 6): 0.013674 s
+load_weight (layer 7): 0.013696 s
+load_weight (layer 8): 0.013677 s
+load_weight (layer 9): 0.013699 s
+load_weight (layer 10): 0.013677 s
+load_weight (layer 11): 0.013699 s
+load_weight (layer 12): 0.013675 s
+load_weight (layer 13): 0.013695 s
+load_weight (layer 14): 0.013674 s
+load_weight (layer 15): 0.013696 s
+load_weight (layer 16): 0.013673 s
+load_weight (layer 17): 0.013991 s
+load_weight (layer 0): 0.013998 s
+load_weight (layer 1): 0.013705 s
+load_weight (layer 2): 0.013697 s
+load_weight (layer 3): 0.013703 s
+load_weight (layer 4): 0.013687 s
+load_weight (layer 5): 0.013701 s
+load_weight (layer 6): 0.013686 s
+load_weight (layer 7): 0.013706 s
+load_weight (layer 8): 0.013693 s
+load_weight (layer 9): 0.013701 s
+load_weight (layer 10): 0.013683 s
+load_weight (layer 11): 0.013699 s
+load_weight (layer 12): 0.013687 s
+load_weight (layer 13): 0.013699 s
+load_weight (layer 14): 0.013685 s
+load_weight (layer 15): 0.013708 s
+load_weight (layer 16): 0.013685 s
+load_weight (layer 17): 0.013996 s
+#layers: 18
+#batches prefill:  18
+#batches decoding: 18
+load_weight            (per-layer): 0.013725 s
+load_cache_prefill     (per-batch): 0.000013 s
+store_cache_prefill    (per-batch): 0.000070 s
+compute_layer_prefill  (per-batch): 0.017856 s
+load_cache_decoding    (per-batch): 0.000040 s
+store_cache_decoding   (per-batch): 0.000016 s
+compute_layer_decoding (per-batch): 0.017663 s
+Throughput (0, 9) = 20/1139425249 tokens/ns
+[FlexGen] Shutdown
+[FlexGen] NUMA Memory Utilization
+[FlexGen] == Node 0: 13217599488/134586421248 (9.82%)
+[FlexGen] == Node 1: 63099027456/135269498880 (46.65%)
+[FlexGen] == Node 2: 106954752/532575944704 (0.02%)
+[FlexGen] == Node 3: 32292864/532575944704 (0.01%)
+opt-175b,ssd/na,nvm/memory,dram/na,gpu/dma
+Instance 0
+[FlexGen] NUMA Memory Utilization
+[FlexGen] == Node 0: 13303705600/134586421248 (9.88%)
+[FlexGen] == Node 1: 11244818432/135269498880 (8.31%)
+[FlexGen] == Node 2: 736010240/532575944704 (0.14%)
+[FlexGen] == Node 3: 1346342912/532575944704 (0.25%)
+[FlexGen] Initialize
+[FlexGen] Generate
+[FlexGen] NUMA Memory Utilization
+[FlexGen] == Node 0: 13339156480/134586421248 (9.91%)
+[FlexGen] == Node 1: 11842371584/135269498880 (8.75%)
+[FlexGen] == Node 2: 9838870528/532575944704 (1.85%)
+[FlexGen] == Node 3: 41510088704/532575944704 (7.79%)
+load_weight (layer 0): 0.019299 s
+load_weight (layer 1): 0.019234 s
+load_weight (layer 2): 0.018467 s
+load_weight (layer 3): 0.018527 s
+load_weight (layer 4): 0.018687 s
+load_weight (layer 5): 0.017585 s
+load_weight (layer 6): 0.017520 s
+load_weight (layer 7): 0.017224 s
+load_weight (layer 8): 0.017214 s
+load_weight (layer 9): 0.017342 s
+load_weight (layer 10): 0.017710 s
+load_weight (layer 11): 0.017271 s
+load_weight (layer 12): 0.017230 s
+load_weight (layer 13): 0.017244 s
+load_weight (layer 14): 0.017628 s
+load_weight (layer 15): 0.017330 s
+load_weight (layer 16): 0.017305 s
+load_weight (layer 17): 0.019672 s
+load_weight (layer 0): 0.017727 s
+load_weight (layer 1): 0.018494 s
+load_weight (layer 2): 0.018365 s
+load_weight (layer 3): 0.018405 s
+load_weight (layer 4): 0.018680 s
+load_weight (layer 5): 0.017624 s
+load_weight (layer 6): 0.017685 s
+load_weight (layer 7): 0.017375 s
+load_weight (layer 8): 0.017293 s
+load_weight (layer 9): 0.017292 s
+load_weight (layer 10): 0.017659 s
+load_weight (layer 11): 0.017301 s
+load_weight (layer 12): 0.017286 s
+load_weight (layer 13): 0.017337 s
+load_weight (layer 14): 0.017680 s
+load_weight (layer 15): 0.017308 s
+load_weight (layer 16): 0.017321 s
+load_weight (layer 17): 0.017871 s
+#layers: 18
+#batches prefill:  18
+#batches decoding: 18
+load_weight            (per-layer): 0.017811 s
+load_cache_prefill     (per-batch): 0.000015 s
+store_cache_prefill    (per-batch): 0.000088 s
+compute_layer_prefill  (per-batch): 0.049417 s
+load_cache_decoding    (per-batch): 0.000044 s
+store_cache_decoding   (per-batch): 0.000017 s
+compute_layer_decoding (per-batch): 0.017862 s
+Throughput (0, 0) = 20/1863754673 tokens/ns
+load_weight (layer 0): 0.017599 s
+load_weight (layer 1): 0.018440 s
+load_weight (layer 2): 0.018275 s
+load_weight (layer 3): 0.018466 s
+load_weight (layer 4): 0.018650 s
+load_weight (layer 5): 0.017586 s
+load_weight (layer 6): 0.017633 s
+load_weight (layer 7): 0.017304 s
+load_weight (layer 8): 0.017196 s
+load_weight (layer 9): 0.017220 s
+load_weight (layer 10): 0.017605 s
+load_weight (layer 11): 0.017321 s
+load_weight (layer 12): 0.017370 s
+load_weight (layer 13): 0.017323 s
+load_weight (layer 14): 0.017622 s
+load_weight (layer 15): 0.017380 s
+load_weight (layer 16): 0.017358 s
+load_weight (layer 17): 0.017728 s
+load_weight (layer 0): 0.017543 s
+load_weight (layer 1): 0.018433 s
+load_weight (layer 2): 0.018247 s
+load_weight (layer 3): 0.018337 s
+load_weight (layer 4): 0.018602 s
+load_weight (layer 5): 0.017560 s
+load_weight (layer 6): 0.017542 s
+load_weight (layer 7): 0.017188 s
+load_weight (layer 8): 0.017140 s
+load_weight (layer 9): 0.017292 s
+load_weight (layer 10): 0.017655 s
+load_weight (layer 11): 0.017382 s
+load_weight (layer 12): 0.017285 s
+load_weight (layer 13): 0.017261 s
+load_weight (layer 14): 0.017668 s
+load_weight (layer 15): 0.017325 s
+load_weight (layer 16): 0.017340 s
+load_weight (layer 17): 0.017846 s
+#layers: 18
+#batches prefill:  18
+#batches decoding: 18
+load_weight            (per-layer): 0.017659 s
+load_cache_prefill     (per-batch): 0.000013 s
+store_cache_prefill    (per-batch): 0.000070 s
+compute_layer_prefill  (per-batch): 0.017832 s
+load_cache_decoding    (per-batch): 0.000039 s
+store_cache_decoding   (per-batch): 0.000016 s
+compute_layer_decoding (per-batch): 0.017659 s
+Throughput (0, 1) = 20/1280772457 tokens/ns
+load_weight (layer 0): 0.017634 s
+load_weight (layer 1): 0.018441 s
+load_weight (layer 2): 0.018235 s
+load_weight (layer 3): 0.018352 s
+load_weight (layer 4): 0.019192 s
+load_weight (layer 5): 0.017718 s
+load_weight (layer 6): 0.017633 s
+load_weight (layer 7): 0.017285 s
+load_weight (layer 8): 0.017222 s
+load_weight (layer 9): 0.017391 s
+load_weight (layer 10): 0.017819 s
+load_weight (layer 11): 0.017299 s
+load_weight (layer 12): 0.017246 s
+load_weight (layer 13): 0.017307 s
+load_weight (layer 14): 0.017618 s
+load_weight (layer 15): 0.017316 s
+load_weight (layer 16): 0.017281 s
+load_weight (layer 17): 0.017826 s
+load_weight (layer 0): 0.017662 s
+load_weight (layer 1): 0.018537 s
+load_weight (layer 2): 0.018449 s
+load_weight (layer 3): 0.018443 s
+load_weight (layer 4): 0.018642 s
+load_weight (layer 5): 0.017491 s
+load_weight (layer 6): 0.017548 s
+load_weight (layer 7): 0.017293 s
+load_weight (layer 8): 0.017232 s
+load_weight (layer 9): 0.017336 s
+load_weight (layer 10): 0.017567 s
+load_weight (layer 11): 0.017183 s
+load_weight (layer 12): 0.017168 s
+load_weight (layer 13): 0.017264 s
+load_weight (layer 14): 0.017694 s
+load_weight (layer 15): 0.017343 s
+load_weight (layer 16): 0.017267 s
+load_weight (layer 17): 0.017828 s
+#layers: 18
+#batches prefill:  18
+#batches decoding: 18
+load_weight            (per-layer): 0.017688 s
+load_cache_prefill     (per-batch): 0.000013 s
+store_cache_prefill    (per-batch): 0.000068 s
+compute_layer_prefill  (per-batch): 0.017827 s
+load_cache_decoding    (per-batch): 0.000038 s
+store_cache_decoding   (per-batch): 0.000016 s
+compute_layer_decoding (per-batch): 0.017656 s
+Throughput (0, 2) = 20/1281443486 tokens/ns
+load_weight (layer 0): 0.017646 s
+load_weight (layer 1): 0.018456 s
+load_weight (layer 2): 0.018293 s
+load_weight (layer 3): 0.018384 s
+load_weight (layer 4): 0.018577 s
+load_weight (layer 5): 0.017720 s
+load_weight (layer 6): 0.017782 s
+load_weight (layer 7): 0.017307 s
+load_weight (layer 8): 0.017199 s
+load_weight (layer 9): 0.017239 s
+load_weight (layer 10): 0.017587 s
+load_weight (layer 11): 0.017270 s
+load_weight (layer 12): 0.017273 s
+load_weight (layer 13): 0.017379 s
+load_weight (layer 14): 0.017627 s
+load_weight (layer 15): 0.017254 s
+load_weight (layer 16): 0.017232 s
+load_weight (layer 17): 0.017738 s
+load_weight (layer 0): 0.017549 s
+load_weight (layer 1): 0.018440 s
+load_weight (layer 2): 0.018277 s
+load_weight (layer 3): 0.018283 s
+load_weight (layer 4): 0.018571 s
+load_weight (layer 5): 0.017608 s
+load_weight (layer 6): 0.017665 s
+load_weight (layer 7): 0.017275 s
+load_weight (layer 8): 0.017217 s
+load_weight (layer 9): 0.017238 s
+load_weight (layer 10): 0.017564 s
+load_weight (layer 11): 0.017323 s
+load_weight (layer 12): 0.017411 s
+load_weight (layer 13): 0.017310 s
+load_weight (layer 14): 0.017624 s
+load_weight (layer 15): 0.017393 s
+load_weight (layer 16): 0.017354 s
+load_weight (layer 17): 0.017845 s
+#layers: 18
+#batches prefill:  18
+#batches decoding: 18
+load_weight            (per-layer): 0.017664 s
+load_cache_prefill     (per-batch): 0.000013 s
+store_cache_prefill    (per-batch): 0.000068 s
+compute_layer_prefill  (per-batch): 0.017828 s
+load_cache_decoding    (per-batch): 0.000038 s
+store_cache_decoding   (per-batch): 0.000016 s
+compute_layer_decoding (per-batch): 0.017657 s
+Throughput (0, 3) = 20/1280596918 tokens/ns
+load_weight (layer 0): 0.017689 s
+load_weight (layer 1): 0.018515 s
+load_weight (layer 2): 0.018312 s
+load_weight (layer 3): 0.018366 s
+load_weight (layer 4): 0.018609 s
+load_weight (layer 5): 0.017560 s
+load_weight (layer 6): 0.017527 s
+load_weight (layer 7): 0.017199 s
+load_weight (layer 8): 0.017107 s
+load_weight (layer 9): 0.017237 s
+load_weight (layer 10): 0.017588 s
+load_weight (layer 11): 0.017237 s
+load_weight (layer 12): 0.017160 s
+load_weight (layer 13): 0.017180 s
+load_weight (layer 14): 0.017548 s
+load_weight (layer 15): 0.017239 s
+load_weight (layer 16): 0.017289 s
+load_weight (layer 17): 0.017744 s
+load_weight (layer 0): 0.017590 s
+load_weight (layer 1): 0.018464 s
+load_weight (layer 2): 0.018313 s
+load_weight (layer 3): 0.018359 s
+load_weight (layer 4): 0.018592 s
+load_weight (layer 5): 0.017649 s
+load_weight (layer 6): 0.017661 s
+load_weight (layer 7): 0.017347 s
+load_weight (layer 8): 0.017274 s
+load_weight (layer 9): 0.017346 s
+load_weight (layer 10): 0.017652 s
+load_weight (layer 11): 0.017274 s
+load_weight (layer 12): 0.017232 s
+load_weight (layer 13): 0.017267 s
+load_weight (layer 14): 0.017718 s
+load_weight (layer 15): 0.017381 s
+load_weight (layer 16): 0.017323 s
+load_weight (layer 17): 0.017772 s
+#layers: 18
+#batches prefill:  18
+#batches decoding: 18
+load_weight            (per-layer): 0.017648 s
+load_cache_prefill     (per-batch): 0.000013 s
+store_cache_prefill    (per-batch): 0.000068 s
+compute_layer_prefill  (per-batch): 0.017824 s
+load_cache_decoding    (per-batch): 0.000038 s
+store_cache_decoding   (per-batch): 0.000015 s
+compute_layer_decoding (per-batch): 0.017658 s
+Throughput (0, 4) = 19/1279908975 tokens/ns
+load_weight (layer 0): 0.017777 s
+load_weight (layer 1): 0.018453 s
+load_weight (layer 2): 0.018291 s
+load_weight (layer 3): 0.018338 s
+load_weight (layer 4): 0.018551 s
+load_weight (layer 5): 0.017591 s
+load_weight (layer 6): 0.017653 s
+load_weight (layer 7): 0.017378 s
+load_weight (layer 8): 0.017268 s
+load_weight (layer 9): 0.017291 s
+load_weight (layer 10): 0.017590 s
+load_weight (layer 11): 0.017175 s
+load_weight (layer 12): 0.017200 s
+load_weight (layer 13): 0.017257 s
+load_weight (layer 14): 0.017759 s
+load_weight (layer 15): 0.017396 s
+load_weight (layer 16): 0.017233 s
+load_weight (layer 17): 0.017676 s
+load_weight (layer 0): 0.017546 s
+load_weight (layer 1): 0.018468 s
+load_weight (layer 2): 0.018303 s
+load_weight (layer 3): 0.018375 s
+load_weight (layer 4): 0.018597 s
+load_weight (layer 5): 0.017556 s
+load_weight (layer 6): 0.017616 s
+load_weight (layer 7): 0.017229 s
+load_weight (layer 8): 0.017116 s
+load_weight (layer 9): 0.017186 s
+load_weight (layer 10): 0.017544 s
+load_weight (layer 11): 0.017259 s
+load_weight (layer 12): 0.017278 s
+load_weight (layer 13): 0.017250 s
+load_weight (layer 14): 0.017554 s
+load_weight (layer 15): 0.017164 s
+load_weight (layer 16): 0.017182 s
+load_weight (layer 17): 0.017716 s
+#layers: 18
+#batches prefill:  18
+#batches decoding: 18
+load_weight            (per-layer): 0.017634 s
+load_cache_prefill     (per-batch): 0.000013 s
+store_cache_prefill    (per-batch): 0.000069 s
+compute_layer_prefill  (per-batch): 0.017828 s
+load_cache_decoding    (per-batch): 0.000039 s
+store_cache_decoding   (per-batch): 0.000015 s
+compute_layer_decoding (per-batch): 0.017659 s
+Throughput (0, 5) = 20/1279520290 tokens/ns
+load_weight (layer 0): 0.017638 s
+load_weight (layer 1): 0.018439 s
+load_weight (layer 2): 0.018335 s
+load_weight (layer 3): 0.018355 s
+load_weight (layer 4): 0.018562 s
+load_weight (layer 5): 0.017633 s
+load_weight (layer 6): 0.017593 s
+load_weight (layer 7): 0.017280 s
+load_weight (layer 8): 0.017213 s
+load_weight (layer 9): 0.017308 s
+load_weight (layer 10): 0.017628 s
+load_weight (layer 11): 0.017283 s
+load_weight (layer 12): 0.017258 s
+load_weight (layer 13): 0.017290 s
+load_weight (layer 14): 0.017618 s
+load_weight (layer 15): 0.017309 s
+load_weight (layer 16): 0.017309 s
+load_weight (layer 17): 0.017715 s
+load_weight (layer 0): 0.017599 s
+load_weight (layer 1): 0.018421 s
+load_weight (layer 2): 0.018220 s
+load_weight (layer 3): 0.018322 s
+load_weight (layer 4): 0.018639 s
+load_weight (layer 5): 0.017530 s
+load_weight (layer 6): 0.017538 s
+load_weight (layer 7): 0.017197 s
+load_weight (layer 8): 0.017181 s
+load_weight (layer 9): 0.017260 s
+load_weight (layer 10): 0.017618 s
+load_weight (layer 11): 0.017242 s
+load_weight (layer 12): 0.017186 s
+load_weight (layer 13): 0.017179 s
+load_weight (layer 14): 0.017532 s
+load_weight (layer 15): 0.017287 s
+load_weight (layer 16): 0.017449 s
+load_weight (layer 17): 0.017970 s
+#layers: 18
+#batches prefill:  18
+#batches decoding: 18
+load_weight            (per-layer): 0.017643 s
+load_cache_prefill     (per-batch): 0.000013 s
+store_cache_prefill    (per-batch): 0.000069 s
+compute_layer_prefill  (per-batch): 0.017830 s
+load_cache_decoding    (per-batch): 0.000038 s
+store_cache_decoding   (per-batch): 0.000016 s
+compute_layer_decoding (per-batch): 0.017657 s
+Throughput (0, 6) = 20/1279824558 tokens/ns
+load_weight (layer 0): 0.017644 s
+load_weight (layer 1): 0.018431 s
+load_weight (layer 2): 0.018296 s
+load_weight (layer 3): 0.018363 s
+load_weight (layer 4): 0.018583 s
+load_weight (layer 5): 0.017586 s
+load_weight (layer 6): 0.017597 s
+load_weight (layer 7): 0.017282 s
+load_weight (layer 8): 0.017288 s
+load_weight (layer 9): 0.017326 s
+load_weight (layer 10): 0.017602 s
+load_weight (layer 11): 0.017189 s
+load_weight (layer 12): 0.017163 s
+load_weight (layer 13): 0.017226 s
+load_weight (layer 14): 0.017619 s
+load_weight (layer 15): 0.017255 s
+load_weight (layer 16): 0.017231 s
+load_weight (layer 17): 0.017623 s
+load_weight (layer 0): 0.017463 s
+load_weight (layer 1): 0.018425 s
+load_weight (layer 2): 0.018269 s
+load_weight (layer 3): 0.018341 s
+load_weight (layer 4): 0.018613 s
+load_weight (layer 5): 0.017568 s
+load_weight (layer 6): 0.017632 s
+load_weight (layer 7): 0.017361 s
+load_weight (layer 8): 0.017274 s
+load_weight (layer 9): 0.017304 s
+load_weight (layer 10): 0.017677 s
+load_weight (layer 11): 0.017288 s
+load_weight (layer 12): 0.017260 s
+load_weight (layer 13): 0.017308 s
+load_weight (layer 14): 0.017726 s
+load_weight (layer 15): 0.017507 s
+load_weight (layer 16): 0.017353 s
+load_weight (layer 17): 0.017765 s
+#layers: 18
+#batches prefill:  18
+#batches decoding: 18
+load_weight            (per-layer): 0.017651 s
+load_cache_prefill     (per-batch): 0.000013 s
+store_cache_prefill    (per-batch): 0.000068 s
+compute_layer_prefill  (per-batch): 0.017841 s
+load_cache_decoding    (per-batch): 0.000038 s
+store_cache_decoding   (per-batch): 0.000016 s
+compute_layer_decoding (per-batch): 0.017656 s
+Throughput (0, 7) = 20/1280309502 tokens/ns
+load_weight (layer 0): 0.017641 s
+load_weight (layer 1): 0.018468 s
+load_weight (layer 2): 0.018314 s
+load_weight (layer 3): 0.018367 s
+load_weight (layer 4): 0.018578 s
+load_weight (layer 5): 0.017603 s
+load_weight (layer 6): 0.017631 s
+load_weight (layer 7): 0.017272 s
+load_weight (layer 8): 0.017177 s
+load_weight (layer 9): 0.017227 s
+load_weight (layer 10): 0.017583 s
+load_weight (layer 11): 0.017274 s
+load_weight (layer 12): 0.017251 s
+load_weight (layer 13): 0.017245 s
+load_weight (layer 14): 0.017594 s
+load_weight (layer 15): 0.017193 s
+load_weight (layer 16): 0.017176 s
+load_weight (layer 17): 0.017649 s
+load_weight (layer 0): 0.017657 s
+load_weight (layer 1): 0.018472 s
+load_weight (layer 2): 0.018275 s
+load_weight (layer 3): 0.018320 s
+load_weight (layer 4): 0.018557 s
+load_weight (layer 5): 0.017558 s
+load_weight (layer 6): 0.017586 s
+load_weight (layer 7): 0.017304 s
+load_weight (layer 8): 0.017246 s
+load_weight (layer 9): 0.017327 s
+load_weight (layer 10): 0.017677 s
+load_weight (layer 11): 0.017296 s
+load_weight (layer 12): 0.017257 s
+load_weight (layer 13): 0.017237 s
+load_weight (layer 14): 0.017597 s
+load_weight (layer 15): 0.017327 s
+load_weight (layer 16): 0.017367 s
+load_weight (layer 17): 0.017747 s
+#layers: 18
+#batches prefill:  18
+#batches decoding: 18
+load_weight            (per-layer): 0.017640 s
+load_cache_prefill     (per-batch): 0.000013 s
+store_cache_prefill    (per-batch): 0.000067 s
+compute_layer_prefill  (per-batch): 0.017835 s
+load_cache_decoding    (per-batch): 0.000038 s
+store_cache_decoding   (per-batch): 0.000016 s
+compute_layer_decoding (per-batch): 0.017659 s
+Throughput (0, 8) = 20/1279893000 tokens/ns
+load_weight (layer 0): 0.017557 s
+load_weight (layer 1): 0.018479 s
+load_weight (layer 2): 0.018263 s
+load_weight (layer 3): 0.018328 s
+load_weight (layer 4): 0.018551 s
+load_weight (layer 5): 0.017629 s
+load_weight (layer 6): 0.017653 s
+load_weight (layer 7): 0.017291 s
+load_weight (layer 8): 0.017282 s
+load_weight (layer 9): 0.017498 s
+load_weight (layer 10): 0.017731 s
+load_weight (layer 11): 0.017276 s
+load_weight (layer 12): 0.017192 s
+load_weight (layer 13): 0.017235 s
+load_weight (layer 14): 0.017599 s
+load_weight (layer 15): 0.017269 s
+load_weight (layer 16): 0.017349 s
+load_weight (layer 17): 0.017833 s
+load_weight (layer 0): 0.017573 s
+load_weight (layer 1): 0.018379 s
+load_weight (layer 2): 0.018308 s
+load_weight (layer 3): 0.018451 s
+load_weight (layer 4): 0.018675 s
+load_weight (layer 5): 0.017600 s
+load_weight (layer 6): 0.017631 s
+load_weight (layer 7): 0.017339 s
+load_weight (layer 8): 0.017302 s
+load_weight (layer 9): 0.017293 s
+load_weight (layer 10): 0.017581 s
+load_weight (layer 11): 0.017217 s
+load_weight (layer 12): 0.017222 s
+load_weight (layer 13): 0.017270 s
+load_weight (layer 14): 0.017651 s
+load_weight (layer 15): 0.017276 s
+load_weight (layer 16): 0.017165 s
+load_weight (layer 17): 0.017599 s
+#layers: 18
+#batches prefill:  18
+#batches decoding: 18
+load_weight            (per-layer): 0.017654 s
+load_cache_prefill     (per-batch): 0.000012 s
+store_cache_prefill    (per-batch): 0.000067 s
+compute_layer_prefill  (per-batch): 0.017833 s
+load_cache_decoding    (per-batch): 0.000038 s
+store_cache_decoding   (per-batch): 0.000016 s
+compute_layer_decoding (per-batch): 0.017671 s
+Throughput (0, 9) = 20/1280481849 tokens/ns
+[FlexGen] Shutdown
+[FlexGen] NUMA Memory Utilization
+[FlexGen] == Node 0: 13338816512/134586421248 (9.91%)
+[FlexGen] == Node 1: 11844366336/135269498880 (8.76%)
+[FlexGen] == Node 2: 9843560448/532575944704 (1.85%)
+[FlexGen] == Node 3: 41539264512/532575944704 (7.8%)
