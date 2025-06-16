@@ -7,47 +7,45 @@ import matplotlib.pyplot as plt
 import numpy as np
 import sys
 
-labels = {
-    "opt-175b,ssd/storage,nvm/na,dram/memory,gpu/dma": "SSD",
-    "opt-175b,ssd/na,nvm/storage,dram/memory,gpu/dma": "FSDAX",
-    "opt-175b,ssd/na,nvm/memory,dram/na,gpu/dma": "NVDRAM",
-    "opt-175b,ssd/na,nvm/memory,dram/cache,gpu/dma": "MemoryMode"
+markers = ["o", "s", "D", "^"]
+num_plot_layers = 70
+xlim = {
+    "opt-30b": min(101, num_plot_layers + 1),
+    "opt-175b": min(201, num_plot_layers + 1)
 }
 
-colors = ["r", "g", "b", "m"]
-markers = ["o", "s", "D", "^"]
-
-def gen_plot(latency, configs, model_size, batch_size):
+def gen_plot(latency, configs, model):
     x = range(len(latency[configs[0]]))
     plot_index = 0
 
-    plt.figure(figsize=(24, 6), dpi=600)
+    plt.figure(figsize=common.figsize_large, dpi=600)
     for config in configs:
-        plt.plot(x, latency[config], color=colors[plot_index],
-                 marker=markers[plot_index], label=labels[config], linewidth=3,
+        plt.plot(x, latency[config], color=common.colormap[plot_index],
+                 marker=markers[plot_index], mew=1, mec="k", ms=20,
+                 label=common.model_config_labels[config], linewidth=2,
                  zorder=3.5)
         plot_index += 1
 
-    plt.xlabel("Layer", size=30)
-    plt.ylabel("Latency (s)", size=30)
+    plt.xlabel("Layer", size=common.font_size["axis_label"])
+    plt.ylabel("Latency (ms)", size=common.font_size["axis_label"])
 
-    # plt.xticks(x, size=25)
-    plt.yticks(size=25)
+    plt.xticks(list(range(0, xlim[model], 10)),
+               size=common.font_size["axis_tick"])
+    plt.yticks(size=common.font_size["axis_tick"])
 
     plt.legend(bbox_to_anchor=(0, 1.02, 1, 0.2), loc="lower left",
-               ncol=len(configs), mode="expand", borderaxespad=0, fontsize=25)
+               ncol=len(configs), mode="expand", borderaxespad=0,
+               fontsize=common.font_size["legend"])
     plt.grid(zorder=2.5, axis='y', color='silver', linestyle='-', linewidth=2)
-    plt.savefig(common.plot_dir + \
-        (f"opt_{model_size}_batch_size_{batch_size}"
-         "_per_layer_load_weight_latency.pdf"),
+    plt.savefig(common.plot_dir + f"{model}_per_layer_load_weight_latency.pdf",
         bbox_inches="tight")
 
-if len(sys.argv) != 3:
-    print(f"Usage: python3 {sys.argv[0]} <model size> <batch size>")
+if len(sys.argv) != 2:
+    print(f"Usage: python3 {sys.argv[0]} <model size>")
     sys.exit(1)
 
 model_size = sys.argv[1]
-batch_size = int(sys.argv[2])
+model = "opt-" + model_size
 
 latency = {}
 configs = []
@@ -56,10 +54,10 @@ config = None
 warmup_completed = False
 
 for line in open(common.output_dir + \
-        f"batch_size_{batch_size}/opt_{model_size}_exec_time_breakdown.txt"):
+        (f"batch_size_1/opt_{model_size}_exec_time_breakdown.txt")):
     line = line.strip()
 
-    if line.startswith(f"opt-{model_size}"):
+    if line.startswith(model):
         config = line.strip()
         latency[config] = []
         configs.append(config)
@@ -77,10 +75,11 @@ for line in open(common.output_dir + \
                 latency[config].append([])
             assert len(latency[config]) > layer
 
-            latency[config][layer].append(float(tokens[-2]))
+            latency[config][layer].append(float(tokens[-2]) * 1000)
 
 for config in configs:
     for layer in range(len(latency[config])):
         latency[config][layer] = np.mean(latency[config][layer])
+    latency[config] = latency[config][:num_plot_layers]
 
-gen_plot(latency, configs, model_size, batch_size)
+gen_plot(latency, configs, model)

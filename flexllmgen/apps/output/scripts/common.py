@@ -1,30 +1,26 @@
 from enum import Enum, auto
+import matplotlib
 import numpy as np
-
-################
-# Applications #
-################
-
-class LLMModels(Enum):
-    OPT_6B = auto()
-    OPT_30B = auto()
-    OPT_175B = auto()
-
-app_name = {
-        LLMModels.OPT_6B: "OPT-6.7B",
-        LLMModels.OPT_30B: "OPT-30B",
-        LLMModels.OPT_175B: "OPT-175B"
-}
-
-app_filename = {
-        LLMModels.OPT_6B: "opt_6.7b.txt",
-        LLMModels.OPT_30B: "opt_30b.txt",
-        LLMModels.OPT_175B: "opt_175b.txt"
-}
 
 base_dir = "/u/sgupta45/FlexLLMGen/flexllmgen/apps/"
 output_dir = base_dir + "output/"
 plot_dir = output_dir + "plots/"
+
+#############################
+# Model specific parameters #
+#############################
+
+num_layers = {
+    "opt-30b": 98,
+    "opt-175b": 194
+}
+batch_sizes = {
+    "opt-30b": [1, 32],
+    "opt-175b": [1, 8]
+}
+all_cpu_batch_sizes = {
+    "opt-175b": [1, 8, 44]
+}
 
 #####################
 # Averaging methods #
@@ -36,34 +32,60 @@ def gmean(iterable):
     a = np.array(iterable)
     return a.prod() ** (1.0 / len(a))
 
+#######################
+# Plotting parameters #
+#######################
+
+colormap = matplotlib.cm.get_cmap("tab10").colors
+
+model_config_labels = {
+    "opt-30b,ssd/na,nvm/na,dram/memory,gpu/dma": "DRAM",
+    "opt-30b,ssd/na,nvm/memory,dram/na,gpu/dma": "NVDRAM",
+    "opt-30b,ssd/na,nvm/memory,dram/cache,gpu/dma": "MemoryMode",
+    "opt-175b,ssd/storage,nvm/na,dram/memory,gpu/dma": "SSD",
+    "opt-175b,ssd/na,nvm/storage,dram/memory,gpu/dma": "FSDAX",
+    "opt-175b,ssd/na,nvm/memory,dram/na,gpu/dma": "NVDRAM",
+    "opt-175b,ssd/na,nvm/memory,dram/cache,gpu/dma": "MemoryMode",
+    "opt-175b,ssd/na,nvm/na,dram/memory,gpu/dma": "DRAM",
+}
+
+figsize_small = (9, 6)
+figsize_medium = (12, 6)
+figsize_large = (24, 6)
+
+font_size = {
+    "axis_label": 35,
+    "axis_tick": 30,
+    "legend": 28,
+}
+
+breakdown_labels = {
+    "load_weight": "Weight Transfer Time (ms)",
+    "compute": "Compute Time (ms)",
+}
+
+scenario_labels = {
+    "O0"    : "NVDRAM (c)",
+    "O1_owp": "HeLM NVDRAM (c)",
+    "O2_owp": "HeLM MemoryMode (c)",
+    "O3_owp": "HeLM DRAM (c)",
+    "O1_ac" : "All-CPU NVDRAM (c)",
+    "O2_ac" : "All-CPU MemoryMode (c)",
+    "O3_ac" : "All-CPU DRAM (c)"
+}
+
 ##################
 # Helper methods #
 ##################
 
 bytes_to_mb = lambda x: x / (2 ** 20)
 bytes_to_gb = lambda x: x / (2 ** 30)
+ns_to_s = lambda x: x / 1e9
 
-######################
-# Load/store methods #
-######################
-
-def get_llm_exec_time(model):
-    exec_time = {}  # Dict with mem type as key (e.g., NVM)
-    mem_type = ""
-    data_distribution = ""
-
-    for line in open(output_dir + app_filename[model]):
-        if "Model generation time" in line:
-            exec_time[mem_type][data_distribution].append(
-                    int(line.split(" ")[4]))
-        else:
-            tokens = line.split(",")
-            mem_type = tokens[0].strip()
-            data_distribution = tokens[1].strip()
-
-            if mem_type not in exec_time:
-                exec_time[mem_type] = {}
-            if data_distribution not in exec_time[mem_type]:
-                exec_time[mem_type][data_distribution] = []
-
-    return exec_time
+def get_width_offset(max_width, num_bars):
+    width = max_width / num_bars
+    if num_bars % 2 == 0:
+        offset = -width * (0.5 + ((num_bars / 2) - 1))
+    else:
+        offset = -width * ((num_bars - 1) / 2)
+    return width, offset
