@@ -1,0 +1,234 @@
+opt-30b,ssd/na,nvm/na,dram/na,gpu/dma
+Instance 0
+[FlexGen] NUMA Memory Utilization
+[FlexGen] == Node 0: 1399754752/134586421248 (1.04%)
+[FlexGen] == Node 1: 63993376768/135269498880 (47.31%)
+[FlexGen] Initialize
+[FlexGen] Generate
+[FlexGen] NUMA Memory Utilization
+[FlexGen] == Node 0: 1677500416/134586421248 (1.25%)
+[FlexGen] == Node 1: 79687270400/135269498880 (58.91%)
+generate (token 0): 4.569042360002641 s
+generate (token 1): 0.6955051140103023 s
+generate (token 2): 0.682400706995395 s
+generate (token 3): 0.6855419300118228 s
+generate (token 4): 0.6825537690019701 s
+generate (token 5): 0.6871241200133227 s
+generate (token 6): 0.6831098420079798 s
+generate (token 7): 0.6874869640014367 s
+generate (token 8): 0.6837632130045677 s
+generate (token 9): 0.6879285229952075 s
+generate (token 10): 0.6857699880056316 s
+generate (token 11): 0.6886992910003755 s
+generate (token 12): 0.684833263992914 s
+generate (token 13): 0.6894710259948624 s
+generate (token 14): 0.6860491249972256 s
+generate (token 15): 0.6894050629925914 s
+generate (token 16): 0.6864771879918408 s
+generate (token 17): 0.6906781220022822 s
+generate (token 18): 0.6865156319981907 s
+generate (token 19): 0.6917349880095571 s
+generate (token 20): 0.6872973470017314 s
+Throughput (0, 0) = 3224/18325945476 tokens/ns
+generate (token 0): 4.285461353996652 s
+generate (token 1): 0.6958272149931872 s
+generate (token 2): 0.6904307980003068 s
+generate (token 3): 0.6925691039941739 s
+generate (token 4): 0.6883024260023376 s
+generate (token 5): 0.6949345920002088 s
+generate (token 6): 0.6885302910086466 s
+generate (token 7): 0.6936859510024078 s
+generate (token 8): 0.6897620659874519 s
+generate (token 9): 0.6950172110082349 s
+generate (token 10): 0.6914988509961404 s
+generate (token 11): 0.6946821439923951 s
+generate (token 12): 0.6905356880015461 s
+generate (token 13): 0.6959553000051528 s
+generate (token 14): 0.6908355640043737 s
+generate (token 15): 0.6955259980022674 s
+generate (token 16): 0.6918587279942585 s
+generate (token 17): 0.696360782996635 s
+generate (token 18): 0.6922651839995524 s
+generate (token 19): 0.6975996770052006 s
+generate (token 20): 0.6922846500092419 s
+Throughput (0, 1) = 3194/18148205856 tokens/ns
+generate (token 0): 4.305505885000457 s
+generate (token 1): 0.6990401729999576 s
+generate (token 2): 0.691115074994741 s
+generate (token 3): 0.6953391120041488 s
+generate (token 4): 0.6912871020031162 s
+generate (token 5): 0.6972233220003545 s
+generate (token 6): 0.6914583350007888 s
+generate (token 7): 0.6966716360038845 s
+generate (token 8): 0.6927060300076846 s
+generate (token 9): 0.6978429019945906 s
+generate (token 10): 0.69180886799586 s
+generate (token 11): 0.6988230739952996 s
+generate (token 12): 0.6932930129987653 s
+generate (token 13): 0.6976250449952204 s
+generate (token 14): 0.6935848830034956 s
+generate (token 15): 0.6991815609944751 s
+generate (token 16): 0.6932121519930661 s
+generate (token 17): 0.6985636289900867 s
+generate (token 18): 0.6957669679977698 s
+generate (token 19): 0.6983451129926834 s
+generate (token 20): 0.6953766329970676 s
+Throughput (0, 2) = 3157/18313819390 tokens/ns
+generate (token 0): 4.323397184998612 s
+generate (token 1): 0.7000047720066505 s
+generate (token 2): 0.6945933319948381 s
+generate (token 3): 0.696393297999748 s
+generate (token 4): 0.6915261710091727 s
+generate (token 5): 0.6982297960057622 s
+generate (token 6): 0.6940342450106982 s
+generate (token 7): 0.6972286139935022 s
+generate (token 8): 0.6948532850074116 s
+generate (token 9): 0.6985668479901506 s
+generate (token 10): 0.6943338889977895 s
+generate (token 11): 0.6990713419945678 s
+generate (token 12): 0.6945976249990053 s
+generate (token 13): 0.6999341320042731 s
+generate (token 14): 0.695915434989729 s
+generate (token 15): 0.6998492699931376 s
+generate (token 16): 0.6949848529911833 s
+generate (token 17): 0.6999260480079101 s
+generate (token 18): 0.6973593089933274 s
+generate (token 19): 0.7001374200044665 s
+generate (token 20): 0.696428676994401 s
+Throughput (0, 3) = 3192/18265812529 tokens/ns
+generate (token 0): 4.334627717995318 s
+generate (token 1): 0.7012157330027549 s
+generate (token 2): 0.6967529199901037 s
+generate (token 3): 0.6978049910103437 s
+generate (token 4): 0.6953616890095873 s
+generate (token 5): 0.6982518559962045 s
+generate (token 6): 0.6940247289894614 s
+generate (token 7): 0.6978353379963664 s
+generate (token 8): 0.6949582850065781 s
+generate (token 9): 0.6989924969966523 s
+generate (token 10): 0.6957686550013022 s
+generate (token 11): 0.7004421890014783 s
+generate (token 12): 0.6948497630073689 s
+generate (token 13): 0.7012016189983115 s
+generate (token 14): 0.6957501689903438 s
+generate (token 15): 0.701157195988344 s
+generate (token 16): 0.6964080769976135 s
+generate (token 17): 0.7022151950077387 s
+generate (token 18): 0.6978303830110235 s
+generate (token 19): 0.7020846220111707 s
+generate (token 20): 0.6973317670053802 s
+Throughput (0, 4) = 3217/18298992786 tokens/ns
+generate (token 0): 4.3461560499999905 s
+generate (token 1): 0.7013590540009318 s
+generate (token 2): 0.6961003899923526 s
+generate (token 3): 0.6989320569991833 s
+generate (token 4): 0.6957520649884827 s
+generate (token 5): 0.7001820729929022 s
+generate (token 6): 0.6954035670059966 s
+generate (token 7): 0.7004986670071958 s
+generate (token 8): 0.6956898739881581 s
+generate (token 9): 0.700587026993162 s
+generate (token 10): 0.6965147739974782 s
+generate (token 11): 0.7015367230051197 s
+generate (token 12): 0.6963494969968451 s
+generate (token 13): 0.7016125140071381 s
+generate (token 14): 0.6968202169955475 s
+generate (token 15): 0.70156296499772 s
+generate (token 16): 0.6968650130002061 s
+generate (token 17): 0.7023536520136986 s
+generate (token 18): 0.6976077779982006 s
+generate (token 19): 0.7025811959902057 s
+generate (token 20): 0.6983344650070649 s
+Throughput (0, 5) = 3244/18327156811 tokens/ns
+generate (token 0): 4.351030605001142 s
+generate (token 1): 0.702493193995906 s
+generate (token 2): 0.6978706369991414 s
+generate (token 3): 0.7001035059947753 s
+generate (token 4): 0.6958804709865944 s
+generate (token 5): 0.7005382770003052 s
+generate (token 6): 0.6960729220008943 s
+generate (token 7): 0.7002128739986802 s
+generate (token 8): 0.6964948480017483 s
+generate (token 9): 0.7013388339983067 s
+generate (token 10): 0.6971460380009376 s
+generate (token 11): 0.701370119000785 s
+generate (token 12): 0.6972042159904959 s
+generate (token 13): 0.7024311909917742 s
+generate (token 14): 0.6973949979874305 s
+generate (token 15): 0.7015935179952066 s
+generate (token 16): 0.6975654669950018 s
+generate (token 17): 0.7023069379938534 s
+generate (token 18): 0.6984579940035474 s
+generate (token 19): 0.7026602989935782 s
+generate (token 20): 0.69895260699559 s
+Throughput (0, 6) = 3169/18343469783 tokens/ns
+generate (token 0): 4.350236515005236 s
+generate (token 1): 0.703366030997131 s
+generate (token 2): 0.6992618419899372 s
+generate (token 3): 0.7029534400062403 s
+generate (token 4): 0.6964183929958381 s
+generate (token 5): 0.703588934004074 s
+generate (token 6): 0.6990711130056297 s
+generate (token 7): 0.7017466230026912 s
+generate (token 8): 0.6990502580010798 s
+generate (token 9): 0.7031971130054444 s
+generate (token 10): 0.6985161880002124 s
+generate (token 11): 0.7028017830016324 s
+generate (token 12): 0.6989231149927946 s
+generate (token 13): 0.7024808909918647 s
+generate (token 14): 0.6988880029966822 s
+generate (token 15): 0.7028473550017225 s
+generate (token 16): 0.6994623030041112 s
+generate (token 17): 0.7039375530002872 s
+generate (token 18): 0.6996522990084486 s
+generate (token 19): 0.704767761999392 s
+generate (token 20): 0.7000732540036552 s
+Throughput (0, 7) = 3206/18375613793 tokens/ns
+generate (token 0): 4.355597857007524 s
+generate (token 1): 0.7039605449972441 s
+generate (token 2): 0.6980808670050465 s
+generate (token 3): 0.7024296340096043 s
+generate (token 4): 0.6963116900005843 s
+generate (token 5): 0.7027696989971446 s
+generate (token 6): 0.6990215749974595 s
+generate (token 7): 0.7025522089970764 s
+generate (token 8): 0.6976117229933152 s
+generate (token 9): 0.7034338020021096 s
+generate (token 10): 0.6997703889937839 s
+generate (token 11): 0.7026766470080474 s
+generate (token 12): 0.69918401799805 s
+generate (token 13): 0.7046559649897972 s
+generate (token 14): 0.6992599990044255 s
+generate (token 15): 0.703737892996287 s
+generate (token 16): 0.6996883819956565 s
+generate (token 17): 0.704730980010936 s
+generate (token 18): 0.7002215960092144 s
+generate (token 19): 0.7045811050047632 s
+generate (token 20): 0.7008455429895548 s
+Throughput (0, 8) = 3161/18385430792 tokens/ns
+generate (token 0): 4.357216169999447 s
+generate (token 1): 0.702898923002067 s
+generate (token 2): 0.6991248720005387 s
+generate (token 3): 0.7023724460013909 s
+generate (token 4): 0.6971167979936581 s
+generate (token 5): 0.7027655889978632 s
+generate (token 6): 0.6986791240051389 s
+generate (token 7): 0.7027123089937959 s
+generate (token 8): 0.6984036439971533 s
+generate (token 9): 0.7039628969941987 s
+generate (token 10): 0.6993644519970985 s
+generate (token 11): 0.7035438419989077 s
+generate (token 12): 0.6992971730069257 s
+generate (token 13): 0.704779100997257 s
+generate (token 14): 0.6995169479923788 s
+generate (token 15): 0.7037056739936816 s
+generate (token 16): 0.6995152240124298 s
+generate (token 17): 0.7045217029954074 s
+generate (token 18): 0.7009488410112681 s
+generate (token 19): 0.7040737250063103 s
+generate (token 20): 0.7011419019981986 s
+Throughput (0, 9) = 3159/18390157465 tokens/ns
+[FlexGen] Shutdown
+[FlexGen] NUMA Memory Utilization
+[FlexGen] == Node 0: 1624301568/134586421248 (1.21%)
+[FlexGen] == Node 1: 19605450752/135269498880 (14.49%)

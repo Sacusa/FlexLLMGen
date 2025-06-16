@@ -1,0 +1,1532 @@
+opt-6.7b,ssd/storage,nvm/na,dram/memory,gpu/dma
+Instance 0
+[FlexGen] NUMA Memory Utilization
+[FlexGen] == Node 0: 4391047168/134586421248 (3.26%)
+[FlexGen] == Node 1: 3968409600/135269519360 (2.93%)
+[DEBUG] Copy worker started
+[DEBUG] Copy worker started
+[DEBUG] Copy worker started
+[DEBUG] Copy worker started
+[FlexGen] Initialize
+[FlexGen] Initializing layer 0/66
+[FlexGen] Initializing layer 1/66
+[FlexGen] Initializing layer 2/66
+[FlexGen] Initializing layer 3/66
+[FlexGen] Initializing layer 4/66
+[FlexGen] Initializing layer 5/66
+[FlexGen] Initializing layer 6/66
+[FlexGen] Initializing layer 7/66
+[FlexGen] Initializing layer 8/66
+[FlexGen] Initializing layer 9/66
+[FlexGen] Initializing layer 10/66
+[FlexGen] Initializing layer 11/66
+[FlexGen] Initializing layer 12/66
+[FlexGen] Initializing layer 13/66
+[FlexGen] Initializing layer 14/66
+[FlexGen] Initializing layer 15/66
+[FlexGen] Initializing layer 16/66
+[FlexGen] Initializing layer 17/66
+[FlexGen] Initializing layer 18/66
+[FlexGen] Initializing layer 19/66
+[FlexGen] Initializing layer 20/66
+[FlexGen] Initializing layer 21/66
+[FlexGen] Initializing layer 22/66
+[FlexGen] Initializing layer 23/66
+[FlexGen] Initializing layer 24/66
+[FlexGen] Initializing layer 25/66
+[FlexGen] Initializing layer 26/66
+[FlexGen] Initializing layer 27/66
+[FlexGen] Initializing layer 28/66
+[FlexGen] Initializing layer 29/66
+[FlexGen] Initializing layer 30/66
+[FlexGen] Initializing layer 31/66
+[FlexGen] Initializing layer 32/66
+[FlexGen] Initializing layer 33/66
+[FlexGen] Initializing layer 34/66
+[FlexGen] Initializing layer 35/66
+[FlexGen] Initializing layer 36/66
+[FlexGen] Initializing layer 37/66
+[FlexGen] Initializing layer 38/66
+[FlexGen] Initializing layer 39/66
+[FlexGen] Initializing layer 40/66
+[FlexGen] Initializing layer 41/66
+[FlexGen] Initializing layer 42/66
+[FlexGen] Initializing layer 43/66
+[FlexGen] Initializing layer 44/66
+[FlexGen] Initializing layer 45/66
+[FlexGen] Initializing layer 46/66
+[FlexGen] Initializing layer 47/66
+[FlexGen] Initializing layer 48/66
+[FlexGen] Initializing layer 49/66
+[FlexGen] Initializing layer 50/66
+[FlexGen] Initializing layer 51/66
+[FlexGen] Initializing layer 52/66
+[FlexGen] Initializing layer 53/66
+[FlexGen] Initializing layer 54/66
+[FlexGen] Initializing layer 55/66
+[FlexGen] Initializing layer 56/66
+[FlexGen] Initializing layer 57/66
+[FlexGen] Initializing layer 58/66
+[FlexGen] Initializing layer 59/66
+[FlexGen] Initializing layer 60/66
+[FlexGen] Initializing layer 61/66
+[FlexGen] Initializing layer 62/66
+[FlexGen] Initializing layer 63/66
+[FlexGen] Initializing layer 64/66
+[FlexGen] Initializing layer 65/66
+[FlexGen] Generate
+[FlexGen] NUMA Memory Utilization
+[FlexGen] == Node 0: 19807203328/134586421248 (14.72%)
+[FlexGen] == Node 1: 11750105088/135269519360 (8.69%)
+[DEBUG] Loading weights for token/layer/batch 0/0/0
+[DEBUG] Normal copy size: 16793600 B
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 205914112.00/15392627.00 B/ns
+[DEBUG]   cuda_dev_copy: 205914112.00/21575431.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 39377587
+[DEBUG] Loading weights for token/layer/batch 0/1/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/60028.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/117291.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/35670.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/54881.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/525801023.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2088311.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/543950645.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2662516.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 594993219
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/2/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/43324.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/4272338.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1132453331.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/7730462.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1158366399
+[DEBUG] Loading weights for token/layer/batch 0/3/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/42679.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/72887.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/55416.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/295276.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/525795918.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2777369.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/543681823.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2670233.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 577702219
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/4/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/49164.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/78197.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1129348407.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/7911472.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1154883565
+[DEBUG] Loading weights for token/layer/batch 0/5/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/45757.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/70827.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/201181.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/293113.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/472602332.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2498125.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/542034741.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 580285068
+[DEBUG]   cuda_dev_copy: 16777216.00/3417098.00 B/ns
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/6/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/42951.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/4597119.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1129367091.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/7888658.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1154460490
+[DEBUG] Loading weights for token/layer/batch 0/7/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/40936.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/68810.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/42314.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/66637.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/545168576.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2685059.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/543872972.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/4487172.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 578029533
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/8/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/36469.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/4374923.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1130149372.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1157053455
+[DEBUG]   cuda_dev_copy: 67108864.00/8988272.00 B/ns
+[DEBUG] Loading weights for token/layer/batch 0/9/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/40183.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/65689.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/40541.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/67799.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/547903286.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2760174.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/541689410.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/5010449.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 578676439
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/10/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/42576.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/4375942.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1130714141.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/8897656.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1157448757
+[DEBUG] Loading weights for token/layer/batch 0/11/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/41427.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/67121.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/54423.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/87536.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/543398003.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2789798.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/546335184.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/4258639.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 578620499
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/12/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/47738.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/4461000.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1130790585.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1158029393
+[DEBUG]   cuda_dev_copy: 67108864.00/8959526.00 B/ns
+[DEBUG] Loading weights for token/layer/batch 0/13/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/43161.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/63394.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/43041.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/68665.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/546577959.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2775616.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/543760126.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/5310174.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 579136151
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/14/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/45702.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/4456992.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1130078118.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/7932363.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1155442878
+[DEBUG] Loading weights for token/layer/batch 0/15/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/51170.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/79901.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/41020.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/67313.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/523949903.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2469418.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/543863093.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/3200220.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 576951829
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/16/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/44192.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/4365262.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1129616578.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/7838166.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1155353172
+[DEBUG] Loading weights for token/layer/batch 0/17/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/39672.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/64612.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/42791.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/70455.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/531318640.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/3256666.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/545347514.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2489259.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 579520097
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/18/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/40567.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/71956.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1130162770.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/7956280.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1155362215
+[DEBUG] Loading weights for token/layer/batch 0/19/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 2 throughput:
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/45171.00 B/ns
+[DEBUG]   cuda_buf_copy: 4096.00/45441.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/67389.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/81135.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/545799525.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2697377.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/535704442.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/4999659.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 579725792
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/20/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/49615.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/83556.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1130701158.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/8265426.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1156350983
+[DEBUG] Loading weights for token/layer/batch 0/21/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/1296581.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/601237.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/79813.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/208780.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/544813803.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2732819.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/544005892.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/4397457.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 583143905
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/22/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/44173.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/73503.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1130421006.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/8360988.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1156408049
+[DEBUG] Loading weights for token/layer/batch 0/23/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/40821.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/65929.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/40855.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/64286.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/457345869.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2582964.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/541620680.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/3392860.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 577346267
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/24/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/43542.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/4536254.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1130193274.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/8368436.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1155990575
+[DEBUG] Loading weights for token/layer/batch 0/25/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/40299.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/67216.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/41276.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/65314.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/459967856.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2809584.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/543682177.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2864785.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 577578190
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/26/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/40838.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/4627687.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1130441322.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1156130418
+[DEBUG]   cuda_dev_copy: 67108864.00/8335593.00 B/ns
+[DEBUG] Loading weights for token/layer/batch 0/27/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 2 throughput:
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/43221.00 B/ns
+[DEBUG]   cuda_buf_copy: 4096.00/42290.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/66861.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/83125.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/524087897.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2847302.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/545447545.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2773083.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 581636093
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/28/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/44058.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/4698287.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1130221230.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/8379133.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1156031209
+[DEBUG] Loading weights for token/layer/batch 0/29/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/53742.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/85981.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/41341.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/67183.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/524737295.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2292714.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/543789455.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2760259.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 577378266
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/30/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/46012.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/4633777.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1130120760.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1155949966
+[DEBUG]   cuda_dev_copy: 67108864.00/8178688.00 B/ns
+[DEBUG] Loading weights for token/layer/batch 0/31/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/55139.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/65545.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/55074.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/88468.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/545649846.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2782200.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/545695963.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 585652101
+[DEBUG]   cuda_dev_copy: 16777216.00/5145490.00 B/ns
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/32/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/43399.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/4596903.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1130152898.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/8122219.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1156288385
+[DEBUG] Loading weights for token/layer/batch 0/33/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/2065467.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/174289.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/47847.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/70374.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/531524805.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2828558.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/544648337.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2895419.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 583247887
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/34/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/37840.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/4833880.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1130197616.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/8071618.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1155909870
+[DEBUG] Loading weights for token/layer/batch 0/35/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/41401.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/67874.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/60894.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/89709.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/525061812.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2568018.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/543787378.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2895610.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 577466961
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/36/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/50188.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/589446.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1130222018.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/8083784.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1155422716
+[DEBUG] Loading weights for token/layer/batch 0/37/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/42495.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/87741.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/41738.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/66506.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/521953306.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2817312.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/543650599.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2822077.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 576367176
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/38/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/45392.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/5063348.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1130768060.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/8415893.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1156915611
+[DEBUG] Loading weights for token/layer/batch 0/39/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/99289.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/7208766.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/41050.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/71587.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/530604583.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2314715.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/542439468.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 582129711
+[DEBUG]   cuda_dev_copy: 16777216.00/3179546.00 B/ns
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/40/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/53115.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/4411797.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1129874987.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/8399229.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1156165318
+[DEBUG] Loading weights for token/layer/batch 0/41/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/49763.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/73888.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/1907652.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/72666.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/545611893.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2805190.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/545657877.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/5477438.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 585371556
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/42/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/44207.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/4665144.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1130569696.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/8413704.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1156626392
+[DEBUG] Loading weights for token/layer/batch 0/43/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/41562.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/69261.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/40681.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/64616.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/525190830.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2685419.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/543840166.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 577354779
+[DEBUG]   cuda_dev_copy: 16777216.00/3123920.00 B/ns
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/44/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/44533.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/4569967.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1130610528.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/8378309.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1157077207
+[DEBUG] Loading weights for token/layer/batch 0/45/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/41011.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/63955.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/42489.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/69493.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/545607985.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2696819.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/543298127.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/5467764.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 583149348
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/46/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/37194.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/59559.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1130700776.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/8462571.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1156324683
+[DEBUG] Loading weights for token/layer/batch 0/47/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/67057.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/424705.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/85371.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/96124.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/478210976.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2819789.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/543074138.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2890924.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 581816898
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/48/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/38292.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/4623275.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1130085368.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/8226855.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1156257317
+[DEBUG] Loading weights for token/layer/batch 0/49/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/39865.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/63398.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/442245.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/77016.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/541677189.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2563949.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/545478039.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2902989.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 582161945
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/50/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/43813.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/4379941.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1130179771.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/8113479.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1155930032
+[DEBUG] Loading weights for token/layer/batch 0/51/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/40706.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/64391.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/48694.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/73868.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/544768154.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2444440.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/542100897.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/4754174.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 580284177
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/52/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/53449.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/4588108.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1130187727.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/8577561.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1157007728
+[DEBUG] Loading weights for token/layer/batch 0/53/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/41380.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/68295.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/53364.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/106238.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/542712341.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2628114.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/540649059.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2903043.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 578326896
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/54/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/48870.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/77261.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1129960658.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/8559854.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1155690731
+[DEBUG] Loading weights for token/layer/batch 0/55/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/40610.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/63570.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/41082.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/66314.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/546377117.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2297134.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/544077172.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 579024099
+[DEBUG]   cuda_dev_copy: 16777216.00/5298573.00 B/ns
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/56/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/36874.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/4144060.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1130139657.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/8275751.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1156616834
+[DEBUG] Loading weights for token/layer/batch 0/57/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/41928.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/66009.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/46935.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/79054.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/532512877.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2527734.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/543884541.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/3027064.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 577136875
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/58/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/47071.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/73095.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1130349567.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/8254159.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1156075261
+[DEBUG] Loading weights for token/layer/batch 0/59/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/42415.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/66667.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/39722.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/63007.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/547732730.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2612714.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/542265729.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 578981035
+[DEBUG]   cuda_dev_copy: 16777216.00/4662630.00 B/ns
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/60/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/43936.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/68837.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1130359674.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/8342267.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1155810148
+[DEBUG] Loading weights for token/layer/batch 0/61/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/51715.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/83696.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/180297.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/75853.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/529281942.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2527709.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/543974836.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/3044560.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 583345136
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/62/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/46775.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/73893.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1129631671.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/8129814.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1154823458
+[DEBUG] Loading weights for token/layer/batch 0/63/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/45135.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/68400.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/39286.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/66731.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/537756098.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/3014615.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/548158960.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/5056084.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 578927467
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/64/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/46513.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/4183230.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/1130568351.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/8688452.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 1157720972
+[DEBUG] Loading weights for token/layer/batch 0/65/0
+[DEBUG] Normal copy size: 411828224 B
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/47846.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/78761.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/39832.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/72154.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 22208055
+[DEBUG] Loading weights for token/layer/batch 1/0/0
+[DEBUG] Normal copy size: 16793600 B
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 205914112.00/11940502.00 B/ns
+[DEBUG]   cuda_dev_copy: 205914112.00/22509102.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 36859842
+[DEBUG] Loading weights for token/layer/batch 1/1/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/46335.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/8467985.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/43021.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/73828.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/1112766.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/3536300.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/779225.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/3145254.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 44716315
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights for token/layer/batch 1/2/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 1 throughput:
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/3135473.00 B/ns
+[DEBUG]   cuda_buf_copy: 16384.00/171251.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/9471014.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 15814947
+[DEBUG]   cuda_dev_copy: 16384.00/12684799.00 B/ns
+[DEBUG] Loading weights for token/layer/batch 1/3/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/89085.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/77764.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/146727.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/69748.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/933199.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/3274934.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/974828.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/3693149.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 45193362
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights for token/layer/batch 1/4/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 0 throughput:
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/2740569.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 15987183
+[DEBUG]   cuda_dev_copy: 67108864.00/9906449.00 B/ns
+[DEBUG]   cuda_buf_copy: 16384.00/183353.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/12890161.00 B/ns
+[DEBUG] Loading weights for token/layer/batch 1/5/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/187625.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/177315.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/42055.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/82832.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/905374.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/3201361.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/785596.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/3177185.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 45039016
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights for token/layer/batch 1/6/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/189288.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/4336144.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/4408177.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/8833912.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 16590790
+[DEBUG] Loading weights for token/layer/batch 1/7/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/804375.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/123749.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/1630343.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2212521.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/1435924.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/4963840.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/41814.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/66180.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 41762323
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights for token/layer/batch 1/8/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/3876071.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/9432249.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG] Loading weights done. Time (ns) = 16484782
+[DEBUG]   cuda_buf_copy: 16384.00/48689.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/6461265.00 B/ns
+[DEBUG] Loading weights for token/layer/batch 1/9/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 3 throughput:
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/80012.00 B/ns
+[DEBUG]   cuda_buf_copy: 4096.00/81906.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/95133.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/131001.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/846637.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/3379282.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/1079006.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/3785104.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 37307009
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights for token/layer/batch 1/10/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 3 throughput:
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/3072724.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 15767537
+[DEBUG]   cuda_dev_copy: 67108864.00/9361126.00 B/ns
+[DEBUG]   cuda_buf_copy: 16384.00/44275.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/12963046.00 B/ns
+[DEBUG] Loading weights for token/layer/batch 1/11/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/84522.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/354261.00 B/ns
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/163484.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/200177.00 B/ns
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/1896185.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2346844.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/1752097.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 45704538
+[DEBUG]   cuda_dev_copy: 16777216.00/5305424.00 B/ns
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights for token/layer/batch 1/12/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/53846.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/3527344.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/3034721.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/8306336.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 15204349
+[DEBUG] Loading weights for token/layer/batch 1/13/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/55205.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/115054.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/908021.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2171119.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/1233608.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/4603730.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/41247.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/70200.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 39980685
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights for token/layer/batch 1/14/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/3702546.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/8438683.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/58812.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/5933045.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 15264572
+[DEBUG] Loading weights for token/layer/batch 1/15/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/46669.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/73748.00 B/ns
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/71523.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/136395.00 B/ns
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/1038457.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/3333822.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/792603.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/3427597.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 38322927
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights for token/layer/batch 1/16/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 1 throughput:
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/3222195.00 B/ns
+[DEBUG]   cuda_buf_copy: 16384.00/43957.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 16476078
+[DEBUG]   cuda_dev_copy: 16384.00/13454882.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/9668109.00 B/ns
+[DEBUG] Loading weights for token/layer/batch 1/17/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/237547.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/69045.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/1551964.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2375619.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/38901.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/75637.00 B/ns
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/1645227.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/5192134.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 40974978
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights for token/layer/batch 1/18/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16384.00/50273.00 B/ns
+[DEBUG]   cuda_dev_copy: 16384.00/66836.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 67108864.00/3319602.00 B/ns
+[DEBUG]   cuda_dev_copy: 67108864.00/7674288.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 19921005
+[DEBUG] Loading weights for token/layer/batch 1/19/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Copy worker 2 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/415227.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/82785.00 B/ns
+[DEBUG] Copy worker 3 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/1302151.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/2889783.00 B/ns
+[DEBUG] Copy worker 0 throughput:
+[DEBUG]   cuda_buf_copy: 16777216.00/1385640.00 B/ns
+[DEBUG]   cuda_dev_copy: 16777216.00/5347016.00 B/ns
+[DEBUG] Copy worker 1 throughput:
+[DEBUG]   cuda_buf_copy: 4096.00/38079.00 B/ns
+[DEBUG]   cuda_dev_copy: 4096.00/61463.00 B/ns
+[DEBUG] Loading weights done. Time (ns) = 36456458
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+#layers: 66
+#batches prefill:  66
+#batches decoding: 16830
+load_weight            (per-layer): 0.653870 s
+load_cache_prefill     (per-batch): 0.000048 s
+store_cache_prefill    (per-batch): 0.000349 s
+compute_layer_prefill  (per-batch): 0.005810 s
+load_cache_decoding    (per-batch): 0.000147 s
+store_cache_decoding   (per-batch): 0.000338 s
+compute_layer_decoding (per-batch): 0.001869 s
+Throughput (0, 0) = 18/56824304730 tokens/ns
+[FlexGen] Shutdown
+[FlexGen] NUMA Memory Utilization
+[FlexGen] == Node 0: 22224388096/134586421248 (16.51%)
+[FlexGen] == Node 1: 16213155840/135269519360 (11.99%)

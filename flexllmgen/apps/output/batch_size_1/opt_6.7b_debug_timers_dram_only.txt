@@ -1,0 +1,1024 @@
+opt-6.7b,ssd/storage,nvm/na,dram/memory,gpu/dma
+Instance 0
+[FlexGen] NUMA Memory Utilization
+[FlexGen] == Node 0: 11592957952/134586421248 (8.61%)
+[FlexGen] == Node 1: 10151239680/135269519360 (7.5%)
+[DEBUG] Copy worker started
+[DEBUG] Copy worker started
+[DEBUG] Copy worker started
+[DEBUG] Copy worker started
+[FlexGen] Initialize
+[FlexGen] Initializing layer 0/66
+[FlexGen] Initializing layer 1/66
+[FlexGen] Initializing layer 2/66
+[FlexGen] Initializing layer 3/66
+[FlexGen] Initializing layer 4/66
+[FlexGen] Initializing layer 5/66
+[FlexGen] Initializing layer 6/66
+[FlexGen] Initializing layer 7/66
+[FlexGen] Initializing layer 8/66
+[FlexGen] Initializing layer 9/66
+[FlexGen] Initializing layer 10/66
+[FlexGen] Initializing layer 11/66
+[FlexGen] Initializing layer 12/66
+[FlexGen] Initializing layer 13/66
+[FlexGen] Initializing layer 14/66
+[FlexGen] Initializing layer 15/66
+[FlexGen] Initializing layer 16/66
+[FlexGen] Initializing layer 17/66
+[FlexGen] Initializing layer 18/66
+[FlexGen] Initializing layer 19/66
+[FlexGen] Initializing layer 20/66
+[FlexGen] Initializing layer 21/66
+[FlexGen] Initializing layer 22/66
+[FlexGen] Initializing layer 23/66
+[FlexGen] Initializing layer 24/66
+[FlexGen] Initializing layer 25/66
+[FlexGen] Initializing layer 26/66
+[FlexGen] Initializing layer 27/66
+[FlexGen] Initializing layer 28/66
+[FlexGen] Initializing layer 29/66
+[FlexGen] Initializing layer 30/66
+[FlexGen] Initializing layer 31/66
+[FlexGen] Initializing layer 32/66
+[FlexGen] Initializing layer 33/66
+[FlexGen] Initializing layer 34/66
+[FlexGen] Initializing layer 35/66
+[FlexGen] Initializing layer 36/66
+[FlexGen] Initializing layer 37/66
+[FlexGen] Initializing layer 38/66
+[FlexGen] Initializing layer 39/66
+[FlexGen] Initializing layer 40/66
+[FlexGen] Initializing layer 41/66
+[FlexGen] Initializing layer 42/66
+[FlexGen] Initializing layer 43/66
+[FlexGen] Initializing layer 44/66
+[FlexGen] Initializing layer 45/66
+[FlexGen] Initializing layer 46/66
+[FlexGen] Initializing layer 47/66
+[FlexGen] Initializing layer 48/66
+[FlexGen] Initializing layer 49/66
+[FlexGen] Initializing layer 50/66
+[FlexGen] Initializing layer 51/66
+[FlexGen] Initializing layer 52/66
+[FlexGen] Initializing layer 53/66
+[FlexGen] Initializing layer 54/66
+[FlexGen] Initializing layer 55/66
+[FlexGen] Initializing layer 56/66
+[FlexGen] Initializing layer 57/66
+[FlexGen] Initializing layer 58/66
+[FlexGen] Initializing layer 59/66
+[FlexGen] Initializing layer 60/66
+[FlexGen] Initializing layer 61/66
+[FlexGen] Initializing layer 62/66
+[FlexGen] Initializing layer 63/66
+[FlexGen] Initializing layer 64/66
+[FlexGen] Initializing layer 65/66
+[FlexGen] Generate
+[FlexGen] NUMA Memory Utilization
+[FlexGen] == Node 0: 24302313472/134586421248 (18.06%)
+[FlexGen] == Node 1: 20862205952/135269519360 (15.42%)
+[DEBUG] Loading weights for token/layer/batch 0/0/0
+[DEBUG] Normal copy size: 411828224 B
+[DEBUG] Normal copy size: 16793600 B
+[DEBUG] Loading weights done. Time (ns) = 22386779
+[DEBUG] Loading weights for token/layer/batch 0/1/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 7136786
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/2/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 13883930
+[DEBUG] Loading weights for token/layer/batch 0/3/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 7025878
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/4/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 13853433
+[DEBUG] Loading weights for token/layer/batch 0/5/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 7005489
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/6/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 13847116
+[DEBUG] Loading weights for token/layer/batch 0/7/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 7001853
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/8/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 13846915
+[DEBUG] Loading weights for token/layer/batch 0/9/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 7005250
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/10/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 13848794
+[DEBUG] Loading weights for token/layer/batch 0/11/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 7013119
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/12/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 13847745
+[DEBUG] Loading weights for token/layer/batch 0/13/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 7002807
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/14/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 13846099
+[DEBUG] Loading weights for token/layer/batch 0/15/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 7002047
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/16/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 13849854
+[DEBUG] Loading weights for token/layer/batch 0/17/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 7008347
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/18/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 13845799
+[DEBUG] Loading weights for token/layer/batch 0/19/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 7003072
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/20/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 13846923
+[DEBUG] Loading weights for token/layer/batch 0/21/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 7001287
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/22/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 13845129
+[DEBUG] Loading weights for token/layer/batch 0/23/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 7005281
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/24/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 13845594
+[DEBUG] Loading weights for token/layer/batch 0/25/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 7002351
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/26/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 11969818
+[DEBUG] Loading weights for token/layer/batch 0/27/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5484240
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/28/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10831117
+[DEBUG] Loading weights for token/layer/batch 0/29/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5484106
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/30/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10830921
+[DEBUG] Loading weights for token/layer/batch 0/31/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5484909
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/32/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10829394
+[DEBUG] Loading weights for token/layer/batch 0/33/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5490818
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/34/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10830522
+[DEBUG] Loading weights for token/layer/batch 0/35/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5487417
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/36/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10830480
+[DEBUG] Loading weights for token/layer/batch 0/37/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5484568
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/38/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10831339
+[DEBUG] Loading weights for token/layer/batch 0/39/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5483967
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/40/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10831667
+[DEBUG] Loading weights for token/layer/batch 0/41/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5486751
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/42/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10833184
+[DEBUG] Loading weights for token/layer/batch 0/43/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5487539
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/44/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10830287
+[DEBUG] Loading weights for token/layer/batch 0/45/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5487265
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/46/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10830529
+[DEBUG] Loading weights for token/layer/batch 0/47/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5487889
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/48/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10830580
+[DEBUG] Loading weights for token/layer/batch 0/49/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5494708
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/50/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10830655
+[DEBUG] Loading weights for token/layer/batch 0/51/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5483041
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/52/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10832666
+[DEBUG] Loading weights for token/layer/batch 0/53/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5489476
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/54/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10830546
+[DEBUG] Loading weights for token/layer/batch 0/55/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5486892
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/56/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10830360
+[DEBUG] Loading weights for token/layer/batch 0/57/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5488172
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/58/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10841309
+[DEBUG] Loading weights for token/layer/batch 0/59/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5497576
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/60/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10832829
+[DEBUG] Loading weights for token/layer/batch 0/61/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5490207
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/62/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10838623
+[DEBUG] Loading weights for token/layer/batch 0/63/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5489541
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Normal copy size: 1048576 B
+[DEBUG] Loading weights for token/layer/batch 0/64/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10832009
+[DEBUG] Loading weights for token/layer/batch 0/65/0
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 411828224 B
+[DEBUG] Loading weights done. Time (ns) = 17407012
+[DEBUG] Loading weights for token/layer/batch 1/0/0
+[DEBUG] Normal copy size: 411828224 B
+[DEBUG] Normal copy size: 16793600 B
+[DEBUG] Loading weights done. Time (ns) = 17278680
+[DEBUG] Loading weights for token/layer/batch 1/1/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5517821
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights for token/layer/batch 1/2/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10842323
+[DEBUG] Loading weights for token/layer/batch 1/3/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5498401
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights for token/layer/batch 1/4/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10837758
+[DEBUG] Loading weights for token/layer/batch 1/5/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5487071
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights for token/layer/batch 1/6/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10831039
+[DEBUG] Loading weights for token/layer/batch 1/7/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5486188
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights for token/layer/batch 1/8/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10827856
+[DEBUG] Loading weights for token/layer/batch 1/9/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5487266
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights for token/layer/batch 1/10/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10832676
+[DEBUG] Loading weights for token/layer/batch 1/11/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5490747
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights for token/layer/batch 1/12/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10846787
+[DEBUG] Loading weights for token/layer/batch 1/13/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5487849
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights for token/layer/batch 1/14/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10829291
+[DEBUG] Loading weights for token/layer/batch 1/15/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5484517
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights for token/layer/batch 1/16/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10829644
+[DEBUG] Loading weights for token/layer/batch 1/17/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5486971
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights for token/layer/batch 1/18/0
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 32768 B
+[DEBUG] Normal copy size: 134217728 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 10847096
+[DEBUG] Loading weights for token/layer/batch 1/19/0
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 33554432 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Loading weights done. Time (ns) = 5483867
+[DEBUG] Normal copy size: 8192 B
+[DEBUG] Normal copy size: 8192 B
+#layers: 66
+#batches prefill:  66
+#batches decoding: 16830
+load_weight            (per-layer): 0.009174 s
+load_cache_prefill     (per-batch): 0.000014 s
+store_cache_prefill    (per-batch): 0.000113 s
+compute_layer_prefill  (per-batch): 0.005699 s
+load_cache_decoding    (per-batch): 0.000042 s
+store_cache_decoding   (per-batch): 0.000113 s
+compute_layer_decoding (per-batch): 0.000786 s
+Throughput (0, 0) = 18/1297456167 tokens/ns
+[FlexGen] Shutdown
+[FlexGen] NUMA Memory Utilization
+[FlexGen] == Node 0: 24303009792/134586421248 (18.06%)
+[FlexGen] == Node 1: 21259972608/135269519360 (15.72%)
