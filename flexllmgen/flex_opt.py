@@ -178,8 +178,8 @@ def init_weight_list(weight_specs, policy, env):
         if not compress:
             if policy.print_allocation_trace:
                 print("Size = " + str(np.prod(shape) * \
-                                      np.dtype(dtype).itemsize) + \
-                      " bytes", flush=True)
+                                      np.dtype(dtype).itemsize) + " bytes",
+                      flush=True)
 
             weight = home.allocate(shape, dtype, pin_memory=pin_memory)
 
@@ -189,8 +189,15 @@ def init_weight_list(weight_specs, policy, env):
                 weight.load_from_np(np.ones(shape, dtype))
                 #weight.load_from_np(np.random.rand(*shape).astype(dtype))
         else:
-            weight = home.compressed_device.allocate(
-                shape, dtype, policy.comp_weight_config, pin_memory=pin_memory)
+            if policy.print_allocation_trace:
+                weight, alloc_size = home.compressed_device.allocate(
+                    shape, dtype, policy.comp_weight_config,
+                    pin_memory=pin_memory, return_size=True)
+                print(f"Size = {alloc_size} bytes", flush=True)
+            else:
+                weight = home.compressed_device.allocate(
+                    shape, dtype, policy.comp_weight_config,
+                    pin_memory=pin_memory)
 
             if DUMMY_WEIGHT not in filename:
                 weight.load_from_np_file(weight_specs_sorted[i][2])

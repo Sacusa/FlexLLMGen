@@ -894,7 +894,6 @@ def copy_worker_func(thread_id, queue, cuda_id, enable_timers):
     cpu_buf = torch.empty((1 * GB,), dtype=torch.float16, pin_memory=True)
     copy_stream = torch.cuda.Stream()
 
-    # SUDHANSHU
     if enable_timers:
         cuda_buf_copy_timer = timers_ns("cuda_buf_copy_" + str(thread_id))
         cuda_dev_copy_timer = timers_ns("cuda_dev_copy_" + str(thread_id))
