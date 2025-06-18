@@ -121,14 +121,10 @@ class TorchTensor:
 
     def load_from_np_file(self, filename):
         if self.device.device_type == DeviceType.DISK:
-            # SUDHANSHU
-            # shutil.copy(filename, self.data)
             if not os.path.exists(self.data):
-                # print("[DEBUG] Copying file from", filename, "to", self.data)
                 with open(filename, "rb") as fsrc:
                     with open(self.data, "wb") as fdst:
                         shutil.copyfileobj(fsrc, fdst)
-            # os.symlink(filename, self.data)
         else:
             self.load_from_np(np.load(filename))
 
@@ -629,7 +625,8 @@ class TorchDevice:
 class TorchDisk:
     """Manage tensors stored on a disk."""
 
-    def __init__(self, path, mem_capacity=None, cuda_id=0, num_copy_threads=4):
+    def __init__(self, path, mem_capacity=None, cuda_id=0, num_copy_threads=4,
+                 enable_copy_worker_timers=False):
         self.name = path
         self.path = os.path.abspath(os.path.expanduser(path))
         self.mem_capacity = mem_capacity
@@ -648,7 +645,8 @@ class TorchDisk:
         self.copy_queue = queue.Queue()
         self.copy_threads = [
             threading.Thread(
-                target=copy_worker_func, args=(i, self.copy_queue, cuda_id)
+                target=copy_worker_func, args=(i, self.copy_queue, cuda_id,
+                                               enable_copy_worker_timers)
             ) for i in range(num_copy_threads)
         ]
         for t in self.copy_threads:
@@ -664,15 +662,12 @@ class TorchDisk:
     def allocate(self, shape, dtype, pin_memory=None, name=None):
         name = name or TorchTensor.next_name()
         path = os.path.join(self.path, name)
-        # SUDHANSHU
-        # np.lib.format.open_memmap(path, mode="w+", shape=shape, dtype=dtype)
         return TorchTensor(shape, np_dtype_to_torch_dtype[dtype],
                            path, self, name=name)
 
     def delete(self, tensor):
-        # SUDHANSHU: keep data; it can be deleted later manually
-        # if os.path.exists(tensor.data) and tensor.delete_file:
-        #     os.remove(tensor.data)
+        if os.path.exists(tensor.data) and tensor.delete_file:
+            os.remove(tensor.data)
         pass
 
     def init_cache_one_gpu_batch(self, config, task, policy):
@@ -861,7 +856,6 @@ def general_copy(dst: TorchTensor, dst_indices: Tuple[slice],
         dst.copy_(src, non_blocking=True)
     else:
         # The normal path
-        # print("[DEBUG] Normal copy size: " + str(src.bytes) + " B", flush=True)
         src = src.data[src_indices] if src_indices else src.data
         dst = dst.data[dst_indices] if dst_indices else dst.data
         dst.copy_(src, non_blocking=True)
@@ -877,8 +871,8 @@ def cut_indices(indices, start, stop, base=0):
 
 def map_to_torch_tensor(tensor, indices):
     if tensor.device.device_type == DeviceType.DISK:
-        # SUDHANSHU: open weight as read-only, otherwise the page cache fills up
-        # and stalls the system
+        # NOTE: Open weight as read-only, otherwise the page cache can fill up
+        # and stall the system
         data = torch.from_numpy(np.lib.format.open_memmap(tensor.data,
                                                           mode="r"))
     else:
@@ -893,7 +887,7 @@ def clear_tensor(tensor, data):
     if tensor.device.device_type == DeviceType.DISK:
         del data
 
-def copy_worker_func(thread_id, queue, cuda_id):
+def copy_worker_func(thread_id, queue, cuda_id, enable_timers):
     """The copy worker thread."""
     torch.cuda.set_device(cuda_id)
 
@@ -901,13 +895,15 @@ def copy_worker_func(thread_id, queue, cuda_id):
     copy_stream = torch.cuda.Stream()
 
     # SUDHANSHU
-    # cuda_buf_copy_timer = timers_ns("cuda_buf_copy_" + str(thread_id))
-    # cuda_dev_copy_timer = timers_ns("cuda_dev_copy_" + str(thread_id))
-    # host_copy_timer = timers_ns("host_copy_" + str(thread_id))
+    if enable_timers:
+        cuda_buf_copy_timer = timers_ns("cuda_buf_copy_" + str(thread_id))
+        cuda_dev_copy_timer = timers_ns("cuda_dev_copy_" + str(thread_id))
+        host_copy_timer = timers_ns("host_copy_" + str(thread_id))
 
-    # cuda_buf_copy_timer.reset()
-    # cuda_dev_copy_timer.reset()
-    # print("[DEBUG] Copy worker started", flush=True)
+        cuda_buf_copy_timer.reset()
+        cuda_dev_copy_timer.reset()
+        host_copy_timer.reset()
+        print("[FlexGen] Copy worker started", flush=True)
 
     with torch.cuda.stream(copy_stream):
         while True:
@@ -926,34 +922,45 @@ def copy_worker_func(thread_id, queue, cuda_id):
                 size = np.prod(src_data.shape)
                 tmp_cpu_buf = cpu_buf[:size].view(src_data.shape)
 
-                # cuda_buf_copy_timer.start()
+                if enable_timers:
+                    cuda_buf_copy_timer.start()
                 tmp_cpu_buf.copy_(src_data)
-                # cuda_buf_copy_timer.stop()
+                if enable_timers:
+                    cuda_buf_copy_timer.stop()
 
-                # cuda_dev_copy_timer.start()
+                if enable_timers:
+                    cuda_dev_copy_timer.start()
                 dst_data.copy_(tmp_cpu_buf)
-                # cuda_dev_copy_timer.stop()
+                if enable_timers:
+                    cuda_dev_copy_timer.stop()
 
-                # size_in_bytes = tmp_cpu_buf.numel() * tmp_cpu_buf.element_size()
+                if enable_timers:
+                    size_in_bytes = tmp_cpu_buf.numel() * \
+                                    tmp_cpu_buf.element_size()
 
-                # print("[DEBUG] Copy worker " + str(thread_id) + " throughput:",
-                #     flush=True)
-                # print("[DEBUG]   cuda_buf_copy: %.2f/%.2f B/ns" % (
-                #     size_in_bytes, cuda_buf_copy_timer.costs[-1]), flush=True)
-                # print("[DEBUG]   cuda_dev_copy: %.2f/%.2f B/ns" % (
-                #     size_in_bytes, cuda_dev_copy_timer.costs[-1]), flush=True)
+                    print("[FlexGen] Copy worker " + str(thread_id) + \
+                          " throughput:", flush=True)
+                    print("[FlexGen]   cuda_buf_copy: %.2f/%.2f B/ns" % (
+                        size_in_bytes, cuda_buf_copy_timer.costs[-1]),
+                        flush=True)
+                    print("[FlexGen]   cuda_dev_copy: %.2f/%.2f B/ns" % (
+                        size_in_bytes, cuda_dev_copy_timer.costs[-1]),
+                        flush=True)
             else:
                 size = np.prod(src_data.shape)
 
-                # host_copy_timer.start()
+                if enable_timers:
+                    host_copy_timer.start()
                 dst_data.copy_(src_data)
-                # host_copy_timer.stop()
+                if enable_timers:
+                    host_copy_timer.stop()
 
-                # size_in_bytes = src_data.numel() * src_data.element_size()
+                if enable_timers:
+                    size_in_bytes = src_data.numel() * src_data.element_size()
 
-                # print("[DEBUG] Copy worker " + str(thread_id) + " throughput:",
-                #     flush=True)
-                # print("[DEBUG]   cuda_buf_copy: %.2f/%.2f B/ns" % (
-                #     size_in_bytes, host_copy_timer.costs[-1]), flush=True)
+                    print("[FlexGen] Copy worker " + str(thread_id) + \
+                          " throughput:", flush=True)
+                    print("[FlexGen]   cuda_buf_copy: %.2f/%.2f B/ns" % (
+                        size_in_bytes, host_copy_timer.costs[-1]), flush=True)
 
             queue.task_done()

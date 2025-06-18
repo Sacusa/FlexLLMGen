@@ -40,12 +40,13 @@ class ExecutionEnv:
     mixed: Any = None
 
     @classmethod
-    def create(cls, offload_dir):
+    def create(cls, offload_dir, enable_copy_worker_timers):
         # fix recursive import
-        from flexllmgen.pytorch_backend import TorchDevice, TorchDisk, TorchMixedDevice
+        from flexgen.pytorch_backend import TorchDevice, TorchDisk, TorchMixedDevice
         gpu = TorchDevice("cuda:0")
         cpu = TorchDevice("cpu")
-        disk = TorchDisk(offload_dir)
+        disk = TorchDisk(offload_dir,
+                         enable_copy_worker_timers=enable_copy_worker_timers)
         return cls(gpu=gpu, cpu=cpu, disk=disk, mixed=TorchMixedDevice([gpu, cpu, disk]))
 
     def close_copy_threads(self):

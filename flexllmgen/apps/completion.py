@@ -39,7 +39,7 @@ def main(args):
         print_dram_utilization(num_memory_numa_nodes)
 
     # Initialize environment
-    env = ExecutionEnv.create(args.offload_dir)
+    env = ExecutionEnv.create(args.offload_dir, args.enable_copy_worker_timers)
 
     # Load the dataset
     dataset = load_dataset(os.environ["HF_DATASETS_CACHE"] + "/c4",
@@ -60,7 +60,8 @@ def main(args):
                     compress_cache=args.compress_cache,
                     comp_cache_config=CompressionConfig(
                         num_bits=4, group_size=64,
-                        group_dim=2, symmetric=False))
+                        group_dim=2, symmetric=False),
+                    print_allocation_trace=args.print_allocation_trace)
 
     # Load the tokenizer and the model
     DEBUG_PRINT("Initialize")
@@ -154,6 +155,12 @@ if __name__ == "__main__":
     parser.add_argument("--offload-dir", type=str,
         default="/bigtemp/sgupta45/flexgen/offload_dir",
         help="The directory to offload tensors. ")
+    parser.add_argument("--debug-mode", type=str,
+        choices=["fewer_batch", "breakdown"])
+    parser.add_argument("--enable-copy-worker-timers", type=str2bool, nargs="?",
+        const=True, default=False)
+    parser.add_argument("--print-allocation-trace", type=str2bool, nargs="?",
+        const=True, default=False)
 
     # HuggingFace parameters
     parser.add_argument("--cache-dir", type=str,
@@ -177,8 +184,6 @@ if __name__ == "__main__":
         help="Comma-separated list of NUMA nodes to allocate the memory on.")
     parser.add_argument("--print-debug-messages", type=str2bool, nargs="?",
         const=True, default=False)
-    parser.add_argument("--debug-mode", type=str,
-        choices=["fewer_batch", "breakdown"])
     parser.add_argument("--print-output-tokens", type=str2bool, nargs="?",
         const=True, default=False)
 

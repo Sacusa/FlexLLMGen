@@ -72,6 +72,9 @@ class Policy:
     compress_cache: bool
     comp_cache_config: CompressionConfig
 
+    # Whether to print model allocation trace
+    print_allocation_trace: bool
+
     @property
     def w_disk_percent(self):
         return 100 - self.w_gpu_percent - self.w_cpu_percent
@@ -85,7 +88,7 @@ class Policy:
         return 100 - self.act_gpu_percent - self.act_cpu_percent
 
 num_mlp_on_gpu = 0
-max_mlp_on_gpu = 28
+max_mlp_on_gpu = -1
 
 def get_weight_schedule(weight_specs, policy, env, scheduling_policy):
     if scheduling_policy == WeightSchedulingPolicy.BASELINE:
@@ -123,7 +126,7 @@ def get_weight_schedule(weight_specs, policy, env, scheduling_policy):
         is_attention = len(weight_specs) == 10
         if is_mlp:
             global num_mlp_on_gpu
-            if num_mlp_on_gpu < max_mlp_on_gpu:
+            if (max_mlp_on_gpu == -1) or (num_mlp_on_gpu < max_mlp_on_gpu):
                 dev_percents = [30, 70, 0]
             num_mlp_on_gpu += 1
 
@@ -145,7 +148,7 @@ def get_choice(cur_percent, percents, choices):
 def init_weight_list(weight_specs, policy, env):
     dev_percents, dev_choices, weight_specs_sorted = get_weight_schedule(
         weight_specs, policy, env,
-        WeightSchedulingPolicy.MLP_FOCUSED)
+        WeightSchedulingPolicy.BASELINE)
 
     sizes = [np.prod(spec[0]) for spec in weight_specs_sorted]
     sizes_cumsum = np.cumsum(sizes)
@@ -156,16 +159,14 @@ def init_weight_list(weight_specs, policy, env):
         home = get_choice(mid_percent * 100, dev_percents, dev_choices)
         shape, dtype, filename = weight_specs_sorted[i]
 
-        # SUDHANSHU
-        print("[FlexGen] Allocating weight on ", end="")
-        if home == env.disk:
-            print("disk. ", end="")
-        elif home == env.cpu:
-            print("cpu. ", end="")
-        elif home == env.gpu:
-            print("gpu. ", end="")
-        print("Size = " + str(np.prod(shape) * np.dtype(dtype).itemsize) + \
-              " bytes", flush=True)
+        if policy.print_allocation_trace:
+            print("[DEBUG] Allocating weight on ", end="")
+            if home == env.disk:
+                print("disk. ", end="")
+            elif home == env.cpu:
+                print("cpu. ", end="")
+            elif home == env.gpu:
+                print("gpu. ", end="")
 
         if len(shape) < 2:
             pin_memory = True
@@ -175,6 +176,11 @@ def init_weight_list(weight_specs, policy, env):
             compress = policy.compress_weight
 
         if not compress:
+            if policy.print_allocation_trace:
+                print("Size = " + str(np.prod(shape) * \
+                                      np.dtype(dtype).itemsize) + \
+                      " bytes", flush=True)
+
             weight = home.allocate(shape, dtype, pin_memory=pin_memory)
 
             if DUMMY_WEIGHT not in filename:
@@ -660,32 +666,17 @@ class OptLM:
         self.policy = policy
         self.num_gpu_batches = policy.num_gpu_batches
 
-        # SUDHANSHU
-        # num_self_attention_layers = 0
-
         layers = []
         layers.append(InputEmbed(self.config, self.env, self.policy))
         for i in range(self.config.num_hidden_layers):
             if policy.sep_layer:
                 layers.append(SelfAttention(self.config, self.env, self.policy, i))
                 layers.append(MLP(self.config, self.env, self.policy, i))
-                # num_self_attention_layers += 1
             else:
                 layers.append(TransformerLayer(self.config, self.env, self.policy, i))
         layers.append(OutputEmbed(self.config, self.env, self.policy))
         self.layers = layers
         self.num_layers = len(layers)
-
-        # SUDHANSHU
-        # print("Number of self-attention layers = " + str(num_self_attention_layers))
-        # num_head, hidden_size, prompt_len, gen_len, gpu_batch_size = (
-        #     config.n_head, config.input_dim, 128, 256,
-        #     policy.gpu_batch_size)
-        # shape = (prompt_len + gen_len - 1, gpu_batch_size * num_head, hidden_size // num_head)
-        # import math
-        # print("Size (in bytes) = ", math.prod(shape) * 2)
-        # print("  prompt_len, gen_len, gpu_batch_size, num_head, hidden_size = ",
-        #       prompt_len, gen_len, gpu_batch_size, num_head, hidden_size)
 
         if self.policy.act_gpu_percent == 100:
             self.act_home = self.env.gpu
@@ -879,9 +870,9 @@ class OptLM:
     def init_all_weights(self):
         self.weight_home = array_1d(self.num_layers, ValueHolder)
         for j in range(self.num_layers):
-            # SUDHANSHU
-            print("[FlexGen] Initializing layer " + str(j + 1) + "/" + \
-                  str(self.num_layers), flush=True)
+            if self.policy.print_allocation_trace:
+                print("[FlexGen] Initializing layer " + str(j + 1) + "/" + \
+                    str(self.num_layers), flush=True)
             self.init_weight(j)
 
     def delete_all_weights(self):
@@ -1023,7 +1014,6 @@ class OptLM:
         timers("compute_layer_prefill").reset()
         timers("compute_layer_decoding").reset()
         load_weight_timer = timers("load_weight")
-        # load_weight_timer = timers_ns("load_weight")
         load_weight_timer.reset()
 
         for i in range(self.execute_gen_len):
@@ -1048,21 +1038,23 @@ class OptLM:
                     self.load_weight(i, j, k)
                 load_weight_timer.stop(self.sync)
 
-                # SUDHANSHU
                 # Debug the costs of individual functions
-                print(f"load_weight (layer {j})"
+                print(f"load_weight   (layer {j})"
                     f": {load_weight_timer.costs[-1]:.6f} s", flush=True)
-                # print(f"load_weight (layer {j})"
-                #       f": {load_weight_timer.costs[-1]/1e9:.6f} s")
 
                 for k in range(self.num_gpu_batches):
                     load_cache_timer.start(self.sync)
                     self.load_cache(i, j, k)
                     load_cache_timer.stop(self.sync)
                     self.load_hidden(i, j, k)
+
                     compute_layer_timer.start(self.sync)
                     self.compute_layer(i, j, k)
                     compute_layer_timer.stop(self.sync)
+                    print(f"compute_layer (layer {j})"
+                          f": {compute_layer_timer.costs[-1]:.6f} s",
+                          flush=True)
+
                     self.store_hidden(i, j, k)
                     store_cache_timer.start(self.sync)
                     self.store_cache(i, j, k)
