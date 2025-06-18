@@ -160,7 +160,7 @@ def init_weight_list(weight_specs, policy, env):
         shape, dtype, filename = weight_specs_sorted[i]
 
         if policy.print_allocation_trace:
-            print("[DEBUG] Allocating weight on ", end="")
+            print("[FlexGen] Allocating weight on ", end="")
             if home == env.disk:
                 print("disk. ", end="")
             elif home == env.cpu:
