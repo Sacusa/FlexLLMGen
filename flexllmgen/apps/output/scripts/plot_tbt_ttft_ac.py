@@ -8,10 +8,10 @@ import numpy as np
 import sys
 
 ylim = {
-    "opt-175b": [0, 15]
+    "opt-175b": [0, 6]
 }
 yticks = {
-    "opt-175b": 3
+    "opt-175b": 1
 }
 
 def gen_plot(latency, scenarios, model, metric):
@@ -66,6 +66,8 @@ def gen_plot(latency, scenarios, model, metric):
 
     # format y-axis
     axis.set_ylabel("Latency (s)", size=common.font_size["axis_label"])
+    # axis.set_ylabel(metric.upper() + " (s)",
+    # size=common.font_size["axis_label"])
     axis.yaxis.set_tick_params(labelsize=common.font_size["axis_tick"])
     axis.set_ylim(ylim[model])
     axis.yaxis.set_major_locator(plt.MultipleLocator(yticks[model]))
@@ -87,12 +89,12 @@ if len(sys.argv) != 2:
 model_size = sys.argv[1]
 model = "opt-" + model_size
 
-scenarios = ["O0", "O1_ac", "O2_ac", "O3_ac"]
+scenarios = ["O0", "O0_ac", "O1_ac", "O2_ac"]
 scenario_dir = {
     "O0"   : "compressed/",
+    "O0_ac": "compressed/all_cpu/",
     "O1_ac": "compressed/all_cpu/",
-    "O2_ac": "compressed/all_cpu/",
-    "O3_ac": "compressed/all_cpu/"
+    "O2_ac": "compressed/all_cpu/"
 }
 nvdram_config = "opt-175b,ssd/na,nvm/memory,dram/na,gpu/dma"
 dram_config = "opt-175b,ssd/na,nvm/na,dram/memory,gpu/dma"
@@ -102,9 +104,9 @@ ttft = {}
 tbt = {}
 
 for scenario in scenarios:
-    if scenario == "O2_ac":
+    if scenario == "O1_ac":
         config = mm_config
-    elif scenario == "O3_ac":
+    elif scenario == "O2_ac":
         config = dram_config
     else:
         config = nvdram_config
@@ -145,6 +147,8 @@ for scenario in scenarios:
                     ttft[scenario][-1].append(latency)
                 else:
                     tbt[scenario][-1].append(latency)
+
+        print(scenario, batch_size, (21 * batch_size) / (np.mean(ttft[scenario][-1]) + (np.mean(tbt[scenario][-1]) * 20)))
 
 gen_plot(tbt,  scenarios, model, "tbt")
 gen_plot(ttft, scenarios, model, "ttft")

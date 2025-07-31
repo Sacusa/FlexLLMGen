@@ -7,8 +7,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 import sys
 
+batch_sizes = {
+    "opt-175b": [8, 44]
+}
 ylim = {
-    "opt-175b": [0, 12]
+    "opt-175b": [0, 14]
 }
 yticks = {
     "opt-175b": 2
@@ -21,7 +24,7 @@ def gen_plot(throughput, scenarios, model):
     plt.rc('axes', axisbelow=True)
 
     # plot parameters
-    x = list(range(len(common.all_cpu_batch_sizes[model])))
+    x = list(range(len(batch_sizes[model])))
     width, offset = common.get_width_offset(0.8, len(scenarios))
 
     all_means = []
@@ -42,31 +45,27 @@ def gen_plot(throughput, scenarios, model):
 
         plt.bar([i+offset for i in x], mean, edgecolor="black",
                 label=common.scenario_labels[scenario], width=width,
-                color=common.colormap[plot_number], zorder=3.5)
+                color=common.colormap_cxl[plot_number],
+                hatch="//" if plot_number % 2 == 1 else "", zorder=3.5)
         # for i in x:
         #     plt.errorbar([i+offset], mean[i], std[i], ecolor="k",
         #                  elinewidth=4, markerfacecolor="k", markeredgecolor="k",
         #                  zorder=3.5)
         offset += width
 
-    baseline_index = [1, 1, 2]
     for i, scenario in enumerate(scenarios):
+        if i % 2 == 0: continue
         print(scenario)
-        for j, bs in enumerate(common.all_cpu_batch_sizes[model]):
-            print(" ", bs, end=" ")
-            if all_means[baseline_index[j]][j] == 0:
-                print("0.0")
-            else:
-                print(((all_means[baseline_index[j]][j] - all_means[i][j]) / \
-                       all_means[baseline_index[j]][j]) * 100)
-
-    for i in range(1, 4):
-        print(f"O{i} (44) / O0 (8):", all_means[i][2] / all_means[0][1])
+        print(" ", batch_sizes[model][0],
+                ((all_means[i-1][0] - all_means[i][0]) / \
+                all_means[i-1][0]) * 100)
+        print(f"  {batch_sizes[model][1]}/{batch_sizes[model][0]}",
+                all_means[i][1] / all_means[i][0])
 
     # format x-axis
     axis.set_xlabel("Batch Size", size=common.font_size["axis_label"])
     axis.set_xticks(x)
-    axis.set_xticklabels([str(i) for i in common.all_cpu_batch_sizes[model]],
+    axis.set_xticklabels([str(i) for i in batch_sizes[model]],
                          size=common.font_size["axis_tick"])
 
     # format y-axis
@@ -83,7 +82,7 @@ def gen_plot(throughput, scenarios, model):
     axis.grid(zorder=2.5, axis='y', color='silver', linestyle='-', linewidth=2)
 
     # save the plot
-    plt.savefig(common.plot_dir + f"{model}_throughput_ac.pdf",
+    plt.savefig(common.plot_dir + f"{model}_throughput_ac_cxl.pdf",
         bbox_inches="tight")
 
 if len(sys.argv) != 2:
@@ -93,33 +92,45 @@ if len(sys.argv) != 2:
 model_size = sys.argv[1]
 model = "opt-" + model_size
 
-scenarios = ["O0", "O0_ac", "O1_ac", "O2_ac"]
+scenarios = ["O0", "O0_ac", "O3", "O3_ac", "O4", "O4_ac"]
 scenario_dir = {
     "O0"   : "compressed/",
     "O0_ac": "compressed/all_cpu/",
-    "O1_ac": "compressed/all_cpu/",
-    "O2_ac": "compressed/all_cpu/"
 }
-nvdram_config = "opt-175b,ssd/na,nvm/memory,dram/na,gpu/dma"
-dram_config = "opt-175b,ssd/na,nvm/na,dram/memory,gpu/dma"
-mm_config = "opt-175b,ssd/na,nvm/memory,dram/cache,gpu/dma"
+config = "opt-175b,ssd/na,nvm/memory,dram/na,gpu/dma"
 
 throughput = {}
 
 for scenario in scenarios:
-    if scenario == "O1_ac":
-        config = mm_config
-    elif scenario == "O2_ac":
-        config = dram_config
-    else:
-        config = nvdram_config
-
     throughput[scenario] = []
 
-    for batch_size in common.all_cpu_batch_sizes[model]:
-        if scenario == "O0" and batch_size > 8:
+    for batch_size in batch_sizes[model]:
+        if "ac" not in scenario and batch_size > 8:
             # These configs only supports batch size up to 8
             throughput[scenario].append([0])
+            continue
+
+        elif "O3" in scenario or "O4" in scenario:
+            # Compute throughput for CXL
+            ffn_load_latency, mha_load_latency = \
+                common.get_cxl_ffn_mha_load_latency(scenario, model_size)
+            ffn_compute_latency, mha_compute_latency = \
+                common.get_cxl_ffn_mha_compute_latency(scenario, model_size,
+                                                       batch_size)
+            num_tokens = 21
+            multiplier = {1: 1.58, 8: 1.57, 44: 1.45}
+
+            ttft = (max(mha_compute_latency[0], ffn_load_latency) + \
+                    max(ffn_compute_latency[0], mha_load_latency)) * \
+                   ((common.num_layers[model] - 2) / 2)
+            tbt = (max(mha_compute_latency[1], ffn_load_latency) + \
+                   max(ffn_compute_latency[1], mha_load_latency)) * \
+                  ((common.num_layers[model] - 2) / 2)
+
+            throughput[scenario].append(
+                [(num_tokens * batch_size * multiplier[batch_size]) / \
+                 (ttft + (tbt * (num_tokens - 1)))])
+            # throughput[scenario].append([batch_size / tbt])
             continue
 
         throughput[scenario].append([])

@@ -8,10 +8,10 @@ import numpy as np
 import sys
 
 ylim = {
-    "opt-175b": [0, 6]
+    "opt-175b": [0, 18]
 }
 yticks = {
-    "opt-175b": 1
+    "opt-175b": 3
 }
 
 def gen_plot(latency, scenarios, model):
@@ -37,20 +37,21 @@ def gen_plot(latency, scenarios, model):
 
         plt.bar([i+offset for i in x], mean, edgecolor="black",
                 label=common.scenario_labels[scenario], width=width,
-                color=common.colormap[plot_number], zorder=3.5)
+                color=common.colormap_cxl[plot_number],
+                hatch="//" if plot_number % 2 == 1 else "", zorder=3.5)
         # for i in x:
         #     plt.errorbar([i+offset], mean[i], std[i], ecolor="k",
-        #                  elinewidth=4, markerfacecolor="k", markeredgecolor="k",
-        #                  zorder=3.5)
+        #                  elinewidth=4, markerfacecolor="k",
+        #                  markeredgecolor="k", zorder=3.5)
         offset += width
 
-    baseline_index = 3
     for i, scenario in enumerate(scenarios):
+        if i % 2 == 0: continue
         print(scenario)
         for j, metric in enumerate(["TTFT", "TBT"]):
             print("  " + metric,
-                  ((all_means[baseline_index][j] - all_means[i][j]) / \
-                    all_means[baseline_index][j]) * 100)
+                  ((all_means[i-1][j] - all_means[i][j]) / \
+                    all_means[i-1][j]) * 100)
 
     # format x-axis
     axis.set_xlabel("Metric", size=common.font_size["axis_label"])
@@ -71,7 +72,7 @@ def gen_plot(latency, scenarios, model):
     axis.grid(zorder=2.5, axis='y', color='silver', linestyle='-', linewidth=2)
 
     # save the plot
-    plt.savefig(common.plot_dir + f"{model}_tbt_ttft_owp.pdf",
+    plt.savefig(common.plot_dir + f"{model}_tbt_ttft_owp_cxl.pdf",
         bbox_inches="tight")
 
 if len(sys.argv) != 2:
@@ -81,26 +82,33 @@ if len(sys.argv) != 2:
 model_size = sys.argv[1]
 model = "opt-" + model_size
 
-scenarios = ["O0", "O0_owp", "O1_owp", "O2_owp"]
+scenarios = ["O0", "O0_owp", "O3", "O3_owp", "O4", "O4_owp"]
 scenario_dir = {
-    "O0"    : "compressed/batch_size_1/",
+    "O0": "compressed/batch_size_1/",
     "O0_owp": "compressed/mlp_focused/batch_size_1/",
-    "O1_owp": "compressed/mlp_focused/batch_size_1/",
-    "O2_owp": "compressed/mlp_focused/batch_size_1/"
 }
-nvdram_config = "opt-175b,ssd/na,nvm/memory,dram/na,gpu/dma"
-dram_config = "opt-175b,ssd/na,nvm/na,dram/memory,gpu/dma"
-mm_config = "opt-175b,ssd/na,nvm/memory,dram/cache,gpu/dma"
+config = "opt-175b,ssd/na,nvm/memory,dram/na,gpu/dma"
 
 latency = {}
 
 for scenario in scenarios:
-    if scenario == "O1_owp":
-        config = mm_config
-    elif scenario == "O2_owp":
-        config = dram_config
-    else:
-        config = nvdram_config
+    if "O3" in scenario or "O4" in scenario:
+        # Compute TTFT and TBT for CXL
+        ffn_load_latency, mha_load_latency = \
+            common.get_cxl_ffn_mha_load_latency(scenario, model_size)
+        ffn_compute_latency, mha_compute_latency = \
+            common.get_cxl_ffn_mha_compute_latency(scenario, model_size, 1)
+
+        ttft = (max(mha_compute_latency[0], ffn_load_latency) + \
+                max(ffn_compute_latency[0], mha_load_latency)) * \
+               ((common.num_layers[model] - 2) / 2)
+        tbt = (max(mha_compute_latency[1], ffn_load_latency) + \
+                max(ffn_compute_latency[1], mha_load_latency)) * \
+              ((common.num_layers[model] - 2) / 2)
+
+        latency[scenario] = [[ttft], [tbt]]
+        continue
+
     config_found = False
     warmup_completed = False
 

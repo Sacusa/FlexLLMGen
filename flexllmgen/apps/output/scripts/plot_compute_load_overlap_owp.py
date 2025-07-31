@@ -85,12 +85,12 @@ model_size = sys.argv[1]
 model = "opt-" + model_size
 last_layer = common.num_layers[model] - 1
 
-scenarios = ["O0", "O1_owp", "O2_owp", "O3_owp"]
+scenarios = ["O0", "O0_owp", "O1_owp", "O2_owp"]
 scenario_dir = {
     "O0"    : "compressed/batch_size_1/",
+    "O0_owp": "compressed/mlp_focused/batch_size_1/",
     "O1_owp": "compressed/mlp_focused/batch_size_1/",
-    "O2_owp": "compressed/mlp_focused/batch_size_1/",
-    "O3_owp": "compressed/mlp_focused/batch_size_1/"
+    "O2_owp": "compressed/mlp_focused/batch_size_1/"
 }
 nvdram_config = "opt-175b,ssd/na,nvm/memory,dram/na,gpu/dma"
 dram_config = "opt-175b,ssd/na,nvm/na,dram/memory,gpu/dma"
@@ -105,9 +105,9 @@ warmup_completed = False
 in_prefill = True
 
 for scenario in scenarios:
-    if scenario == "O2_owp":
+    if scenario == "O1_owp":
         config = mm_config
-    elif scenario == "O3_owp":
+    elif scenario == "O2_owp":
         config = dram_config
     else:
         config = nvdram_config
@@ -139,7 +139,7 @@ for scenario in scenarios:
             if "layer 0" in line or f"layer {last_layer}" in line:
                 # NOTE: SPECIAL HANDLING FOR NVDRAM
                 ###################################
-                if scenario in ["O0", "O1_owp"] and \
+                if scenario in ["O0", "O0_owp"] and \
                     f"layer {last_layer}" in line:
                     in_prefill = False
                 continue
@@ -182,7 +182,7 @@ for scenario in scenarios:
     decode_mha_load_latency[scenario] = decode_load_latency[scenario][0::2]
     decode_ffn_load_latency[scenario] = decode_load_latency[scenario][1::2]
 
-    if scenario not in ["O0", "O1_owp"]:
+    if scenario not in ["O0", "O0_owp"]:
         prefill_mha_compute_latency[scenario] = \
             prefill_compute_latency[scenario][0::2]
         prefill_ffn_compute_latency[scenario] = \
@@ -194,8 +194,8 @@ for scenario in scenarios:
 
 # NOTE: SPECIAL HANDLING FOR NVDRAM
 ###################################
-copy_scenario = "O2_owp"
-for nvdram_scenario in ["O0", "O1_owp"]:
+copy_scenario = "O1_owp"
+for nvdram_scenario in ["O0", "O0_owp"]:
     prefill_mha_compute_latency[nvdram_scenario] = \
         prefill_mha_compute_latency[copy_scenario][:]
     prefill_ffn_compute_latency[nvdram_scenario] = \
