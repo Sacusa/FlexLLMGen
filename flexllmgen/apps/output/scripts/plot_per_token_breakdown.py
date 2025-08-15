@@ -32,7 +32,7 @@ def gen_plot(load_weight_latency, compute_latency, ideal_load_weight_latency,
     x = list(range(len(common.batch_sizes[model])))
     width, offset = common.get_width_offset(0.8, len(configs))
 
-    for plot_number, config in enumerate(configs):
+    for config in configs:
         mean = []
         std = []
         print(common.model_config_labels[config], end=" ")
@@ -46,7 +46,7 @@ def gen_plot(load_weight_latency, compute_latency, ideal_load_weight_latency,
         # bars for load_weight_latency
         axis.bar([i+offset for i in x], mean, edgecolor="black",
                  label=common.model_config_labels[config], width=width,
-                 color=common.colormap[plot_number], zorder=3.5)
+                 color=common.model_config_colors[config], zorder=3.5)
         # for i in x:
         #     axis.errorbar([i+offset], mean[i], std[i], ecolor="k",
         #                   elinewidth=4, markerfacecolor="k",

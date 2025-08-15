@@ -28,7 +28,7 @@ def gen_plot(load_weight_latency, compute_latency, scenarios, model, stage):
     load_means = []
     compute_means = []
 
-    for plot_number, scenario in enumerate(scenarios):
+    for scenario in scenarios:
         mean = []
         std = []
         for i in range(len(load_weight_latency[scenario])):
@@ -40,7 +40,7 @@ def gen_plot(load_weight_latency, compute_latency, scenarios, model, stage):
         # bars for load_weight_latency
         axis.bar([i+offset for i in x], mean, edgecolor="black",
                  label=scenario, width=width,
-                 color=common.colormap[plot_number], zorder=3.5)
+                 color=colormap[scenario], zorder=3.5)
         # for i in x:
         #     axis.errorbar([i+offset], mean[i], std[i], ecolor="k",
         #                   elinewidth=4, markerfacecolor="k",
@@ -113,6 +113,13 @@ scenario_dir = {
     "NVDRAM (c)": "compressed/",
     "MemoryMode (c)": "compressed/",
     "DRAM (c)": "compressed/"
+}
+colormap = {
+    "NVDRAM": common.colormap[2],
+    "MemoryMode": common.colormap[1],
+    "NVDRAM (c)": common.colormap[0],
+    "MemoryMode (c)": common.colormap[7],
+    "DRAM (c)": common.colormap[8]
 }
 nvdram_config = "opt-175b,ssd/na,nvm/memory,dram/na,gpu/dma"
 dram_config = "opt-175b,ssd/na,nvm/na,dram/memory,gpu/dma"

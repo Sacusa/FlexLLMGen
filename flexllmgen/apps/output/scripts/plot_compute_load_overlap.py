@@ -14,6 +14,8 @@ yticks = {
     "opt-175b": 6
 }
 
+colormap = [common.colormap[0], common.colormap[7], common.colormap[8]]
+
 def gen_plot(mha_load_latency, mha_compute_latency, ffn_load_latency,
              ffn_compute_latency, configs, model, batch_size, stage):
     # initialize pyplot
@@ -32,7 +34,7 @@ def gen_plot(mha_load_latency, mha_compute_latency, ffn_load_latency,
         # bars for load_weight_latency
         axis.bar([i+offset for i in x], mean, edgecolor="black",
                  label=common.model_config_labels[config] + " (c)", width=width,
-                 color=common.colormap[plot_number], zorder=3.5)
+                 color=colormap[plot_number], zorder=3.5)
         offset += width
 
     width, offset = common.get_width_offset(0.8, len(configs))

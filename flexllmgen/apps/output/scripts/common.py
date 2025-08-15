@@ -67,6 +67,22 @@ model_config_labels = {
     "opt-175b,ssd/na,nvm/na,dram/memory,gpu/dma": "DRAM",
 }
 
+model_config_colors = {
+    # SSD
+    "opt-175b,ssd/storage,nvm/na,dram/memory,gpu/dma": colormap[5],
+    # FSDAX
+    "opt-175b,ssd/na,nvm/storage,dram/memory,gpu/dma": colormap[3],
+    # NVDRAM
+    "opt-30b,ssd/na,nvm/memory,dram/na,gpu/dma": colormap[2],
+    "opt-175b,ssd/na,nvm/memory,dram/na,gpu/dma": colormap[2],
+    # MemoryMode
+    "opt-30b,ssd/na,nvm/memory,dram/cache,gpu/dma": colormap[1],
+    "opt-175b,ssd/na,nvm/memory,dram/cache,gpu/dma": colormap[1],
+    # DRAM
+    "opt-30b,ssd/na,nvm/na,dram/memory,gpu/dma": colormap[0],
+    "opt-175b,ssd/na,nvm/na,dram/memory,gpu/dma": colormap[0],
+}
+
 figsize_small = (9, 6)
 figsize_medium = (12, 6)
 figsize_large = (24, 6)

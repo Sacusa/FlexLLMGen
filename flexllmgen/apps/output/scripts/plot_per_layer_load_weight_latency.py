@@ -20,7 +20,7 @@ def gen_plot(latency, configs, model):
 
     plt.figure(figsize=common.figsize_large, dpi=600)
     for config in configs:
-        plt.plot(x, latency[config], color=common.colormap[plot_index],
+        plt.plot(x, latency[config], color=common.model_config_colors[config],
                  marker=markers[plot_index], mew=1, mec="k", ms=20,
                  label=common.model_config_labels[config], linewidth=2,
                  zorder=3.5)

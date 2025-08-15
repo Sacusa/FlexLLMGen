@@ -8,22 +8,117 @@ import numpy as np
 import sys
 
 ylim = {
-    "opt-175b": {
-        1: [0, 36],
-        8: [0, 42],
-        44: [0, 100],
-    }
+    "opt-175b": [0, 100]
 }
 yticks = {
-    "opt-175b": {
-        1: 6,
-        8: 7,
-        44: 20,
-    }
+    "opt-175b": 20
 }
 
+scenarios = ["O0", "O0_ac", "O1_ac", "O2_ac"]
+scenario_dir = {
+    "O0"   : "compressed/",
+    "O1"   : "compressed/",
+    "O0_ac": "compressed/all_cpu/",
+    "O1_ac": "compressed/all_cpu/",
+    "O2_ac": "compressed/all_cpu/"
+}
+nvdram_scenarios = ["O0", "O0_ac"]
+batch_size = {"O0": 8, "O0_ac": 44, "O1_ac": 44, "O2_ac": 44}
+
+nvdram_config = "opt-175b,ssd/na,nvm/memory,dram/na,gpu/dma"
+dram_config = "opt-175b,ssd/na,nvm/na,dram/memory,gpu/dma"
+mm_config = "opt-175b,ssd/na,nvm/memory,dram/cache,gpu/dma"
+
+def get_stats(model, scenario, batch_size):
+    last_layer = common.num_layers[model] - 1
+
+    if scenario == "O1_ac":
+        config = mm_config
+    elif scenario == "O2_ac":
+        config = dram_config
+    else:
+        config = nvdram_config
+
+    config_found = False
+    warmup_completed = False
+    in_prefill = True
+
+    prefill_load_latency = []
+    prefill_compute_latency = []
+    decode_load_latency = []
+    decode_compute_latency = []
+
+    for line in open(common.output_dir + scenario_dir[scenario] + \
+            (f"batch_size_{batch_size}/opt_{model_size}"
+                "_exec_time_breakdown.txt")):
+        line = line.strip()
+
+        if line.startswith(model):
+            if config_found:
+                break
+            elif line.startswith(config):
+                config_found = True
+
+        elif line.startswith("Throughput") and config_found:
+            if line.startswith("Throughput (0, 0)"):
+                warmup_completed = True
+            in_prefill = True
+
+        elif line.startswith("load_weight (layer ") and warmup_completed:
+            if "layer 0" in line or f"layer {last_layer}" in line:
+                # NOTE: SPECIAL HANDLING FOR NVDRAM
+                ###################################
+                if scenario in ["O0", "O0_ac"] and \
+                    f"layer {last_layer}" in line:
+                    in_prefill = False
+                continue
+
+            if in_prefill:
+                prefill_load_latency.append(
+                    float(line.split(" ")[-2]) * 1000)
+            else:
+                decode_load_latency.append(
+                    float(line.split(" ")[-2]) * 1000)
+
+        elif line.startswith("compute_layer (layer ") and warmup_completed:
+            if "layer 0" in line:
+                continue
+            elif f"layer {last_layer}" in line:
+                in_prefill = False
+                continue
+
+            if in_prefill:
+                prefill_compute_latency.append(
+                    float(line.split(" ")[-2]) * 1000)
+            else:
+                decode_compute_latency.append(
+                    float(line.split(" ")[-2]) * 1000)
+
+    prefill_mha_load_latency = prefill_load_latency[0::2]
+    prefill_ffn_load_latency = prefill_load_latency[1::2]
+    decode_mha_load_latency = decode_load_latency[0::2]
+    decode_ffn_load_latency = decode_load_latency[1::2]
+
+    # NOTE: SPECIAL HANDLING FOR NVDRAM
+    ###################################
+    if scenario not in nvdram_scenarios:
+        prefill_mha_compute_latency = prefill_compute_latency[0::2]
+        prefill_ffn_compute_latency = prefill_compute_latency[1::2]
+        decode_mha_compute_latency = decode_compute_latency[0::2]
+        decode_ffn_compute_latency = decode_compute_latency[1::2]
+    else:
+        prefill_mha_compute_latency = []
+        prefill_ffn_compute_latency = []
+        decode_mha_compute_latency = []
+        decode_ffn_compute_latency = []
+
+    return (prefill_mha_load_latency, prefill_ffn_load_latency,
+            prefill_mha_compute_latency, prefill_ffn_compute_latency,
+            decode_mha_load_latency, decode_ffn_load_latency,
+            decode_mha_compute_latency, decode_ffn_compute_latency)
+
 def gen_plot(mha_load_latency, mha_compute_latency, ffn_load_latency,
-             ffn_compute_latency, scenarios, model, stage, batch_size):
+             ffn_compute_latency, scenarios, model, stage):
     # initialize pyplot
     plt.clf()
     _, axis = plt.subplots(figsize=common.figsize_small, dpi=600)
@@ -41,7 +136,8 @@ def gen_plot(mha_load_latency, mha_compute_latency, ffn_load_latency,
 
         # bars for load_weight_latency
         axis.bar([i+offset for i in x], mean, edgecolor="black",
-                 label=common.scenario_labels[scenario], width=width,
+                 label=f"{common.scenario_labels[scenario]}"
+                       f"({batch_size[scenario]})", width=width,
                  color=common.colormap[plot_number], zorder=3.5)
         offset += width
 
@@ -71,8 +167,8 @@ def gen_plot(mha_load_latency, mha_compute_latency, ffn_load_latency,
     # format y-axis
     axis.set_ylabel("Time (ms)", size=common.font_size["axis_label"])
     axis.yaxis.set_tick_params(labelsize=common.font_size["axis_tick"])
-    axis.set_ylim(ylim[model][batch_size])
-    axis.yaxis.set_major_locator(plt.MultipleLocator(yticks[model][batch_size]))
+    axis.set_ylim(ylim[model])
+    axis.yaxis.set_major_locator(plt.MultipleLocator(yticks[model]))
 
     # format the plot
     axis.legend(bbox_to_anchor=(0, 1.02, 1, 0.2), loc="lower left",
@@ -82,7 +178,7 @@ def gen_plot(mha_load_latency, mha_compute_latency, ffn_load_latency,
 
     # save the plot
     plt.savefig(common.plot_dir + \
-                f"{model}_compute_load_overlap_ac_bs{batch_size}_{stage}.pdf",
+                f"{model}_compute_load_overlap_ac_{stage}.pdf",
         bbox_inches="tight")
 
 if len(sys.argv) != 2:
@@ -91,141 +187,46 @@ if len(sys.argv) != 2:
 
 model_size = sys.argv[1]
 model = "opt-" + model_size
-last_layer = common.num_layers[model] - 1
 
-scenarios = ["O0", "O0_ac", "O1_ac", "O2_ac"]
-scenario_dir = {
-    "O0"   : "compressed/",
-    "O0_ac": "compressed/all_cpu/",
-    "O1_ac": "compressed/all_cpu/",
-    "O2_ac": "compressed/all_cpu/"
-}
-nvdram_config = "opt-175b,ssd/na,nvm/memory,dram/na,gpu/dma"
-dram_config = "opt-175b,ssd/na,nvm/na,dram/memory,gpu/dma"
-mm_config = "opt-175b,ssd/na,nvm/memory,dram/cache,gpu/dma"
+prefill_mha_load_latency = {}
+prefill_ffn_load_latency = {}
+prefill_mha_compute_latency = {}
+prefill_ffn_compute_latency = {}
+decode_mha_load_latency = {}
+decode_ffn_load_latency = {}
+decode_mha_compute_latency = {}
+decode_ffn_compute_latency = {}
 
-for batch_size in common.all_cpu_batch_sizes[model]:
-    prefill_load_latency = {}
-    prefill_compute_latency = {}
-    decode_load_latency = {}
-    decode_compute_latency = {}
-
-    warmup_completed = False
-    in_prefill = True
-
-    for scenario in scenarios:
-        if scenario == "O1_ac":
-            config = mm_config
-        elif scenario == "O2_ac":
-            config = dram_config
-        else:
-            config = nvdram_config
-        config_found = False
-        warmup_completed = False
-        in_prefill = True
-
-        prefill_load_latency[scenario] = []
-        prefill_compute_latency[scenario] = []
-        decode_load_latency[scenario] = []
-        decode_compute_latency[scenario] = []
-
-        if scenario == "O0" and batch_size > 8:
-            prefill_load_latency[scenario] = [0, 0]
-            prefill_compute_latency[scenario] = [0, 0]
-            decode_load_latency[scenario] = [0, 0]
-            decode_compute_latency[scenario] = [0, 0]
-            continue
-
-        for line in open(common.output_dir + scenario_dir[scenario] + \
-                (f"batch_size_{batch_size}/opt_{model_size}"
-                 "_exec_time_breakdown.txt")):
-            line = line.strip()
-
-            if line.startswith(model):
-                if config_found:
-                    break
-                elif line.startswith(config):
-                    config_found = True
-
-            elif line.startswith("Throughput") and config_found:
-                if line.startswith("Throughput (0, 0)"):
-                    warmup_completed = True
-                in_prefill = True
-
-            elif line.startswith("load_weight (layer ") and warmup_completed:
-                if "layer 0" in line or f"layer {last_layer}" in line:
-                    # NOTE: SPECIAL HANDLING FOR NVDRAM
-                    ###################################
-                    if scenario in ["O0", "O0_ac"] and \
-                        f"layer {last_layer}" in line:
-                        in_prefill = False
-                    continue
-
-                if in_prefill:
-                    prefill_load_latency[scenario].append(
-                        float(line.split(" ")[-2]) * 1000)
-                else:
-                    decode_load_latency[scenario].append(
-                        float(line.split(" ")[-2]) * 1000)
-
-            elif line.startswith("compute_layer (layer ") and warmup_completed:
-                if "layer 0" in line:
-                    continue
-                elif f"layer {last_layer}" in line:
-                    in_prefill = False
-                    continue
-
-                if in_prefill:
-                    prefill_compute_latency[scenario].append(
-                        float(line.split(" ")[-2]) * 1000)
-                else:
-                    decode_compute_latency[scenario].append(
-                        float(line.split(" ")[-2]) * 1000)
-
-    prefill_mha_load_latency = {}
-    prefill_ffn_load_latency = {}
-    prefill_mha_compute_latency = {}
-    prefill_ffn_compute_latency = {}
-
-    decode_mha_load_latency = {}
-    decode_ffn_load_latency = {}
-    decode_mha_compute_latency = {}
-    decode_ffn_compute_latency = {}
-
-    for scenario in scenarios:
-        prefill_mha_load_latency[scenario] = prefill_load_latency[scenario][0::2]
-        prefill_ffn_load_latency[scenario] = prefill_load_latency[scenario][1::2]
-
-        decode_mha_load_latency[scenario] = decode_load_latency[scenario][0::2]
-        decode_ffn_load_latency[scenario] = decode_load_latency[scenario][1::2]
-
-        if (scenario != "O0_ac") and (scenario != "O0" or batch_size > 8):
-            prefill_mha_compute_latency[scenario] = \
-                prefill_compute_latency[scenario][0::2]
-            prefill_ffn_compute_latency[scenario] = \
-                prefill_compute_latency[scenario][1::2]
-            decode_mha_compute_latency[scenario] = \
-                decode_compute_latency[scenario][0::2]
-            decode_ffn_compute_latency[scenario] = \
-                decode_compute_latency[scenario][1::2]
+for scenario in scenarios:
+    prefill_mha_load, prefill_ffn_load, prefill_mha_compute, \
+        prefill_ffn_compute, decode_mha_load, decode_ffn_load, \
+        decode_mha_compute, decode_ffn_compute = \
+        get_stats(model, scenario, batch_size[scenario])
 
     # NOTE: SPECIAL HANDLING FOR NVDRAM
     ###################################
-    nvdram_scenarios = ["O0", "O0_ac"] if batch_size <= 8 else ["O0_ac"]
-    copy_scenario = "O1_ac"
-    for nvdram_scenario in nvdram_scenarios:
-        prefill_mha_compute_latency[nvdram_scenario] = \
-            prefill_mha_compute_latency[copy_scenario][:]
-        prefill_ffn_compute_latency[nvdram_scenario] = \
-            prefill_ffn_compute_latency[copy_scenario][:]
-        decode_mha_compute_latency[nvdram_scenario] = \
-            decode_mha_compute_latency[copy_scenario][:]
-        decode_ffn_compute_latency[nvdram_scenario] = \
-            decode_ffn_compute_latency[copy_scenario][:]
+    if scenario in nvdram_scenarios:
+        if scenario == "O0":
+            _, _, prefill_mha_compute, prefill_ffn_compute, _, _, \
+                decode_mha_compute, decode_ffn_compute = \
+                get_stats(model, "O1", batch_size[scenario])
+        elif scenario == "O0_ac":
+            _, _, prefill_mha_compute, prefill_ffn_compute, _, _, \
+                decode_mha_compute, decode_ffn_compute = \
+                get_stats(model, "O1_ac", batch_size[scenario])
 
-    gen_plot(prefill_mha_load_latency, prefill_mha_compute_latency,
-                prefill_ffn_load_latency, prefill_ffn_compute_latency,
-                scenarios, model, "prefill", batch_size)
-    gen_plot(decode_mha_load_latency, decode_mha_compute_latency,
-                decode_ffn_load_latency, decode_ffn_compute_latency,
-                scenarios, model, "decode", batch_size)
+    prefill_mha_load_latency[scenario] = prefill_mha_load
+    prefill_ffn_load_latency[scenario] = prefill_ffn_load
+    prefill_mha_compute_latency[scenario] = prefill_mha_compute
+    prefill_ffn_compute_latency[scenario] = prefill_ffn_compute
+    decode_mha_load_latency[scenario] = decode_mha_load
+    decode_ffn_load_latency[scenario] = decode_ffn_load
+    decode_mha_compute_latency[scenario] = decode_mha_compute
+    decode_ffn_compute_latency[scenario] = decode_ffn_compute
+
+gen_plot(prefill_mha_load_latency, prefill_mha_compute_latency,
+            prefill_ffn_load_latency, prefill_ffn_compute_latency,
+            scenarios, model, "prefill")
+gen_plot(decode_mha_load_latency, decode_mha_compute_latency,
+            decode_ffn_load_latency, decode_ffn_compute_latency,
+            scenarios, model, "decode")

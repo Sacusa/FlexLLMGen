@@ -30,7 +30,7 @@ def gen_plot(latency, configs, model, metric):
     all_means = []
     baseline_index = 0
 
-    for plot_number, config in enumerate(configs):
+    for config in configs:
         mean = []
         std = []
         for i in range(len(latency[config])):
@@ -41,7 +41,7 @@ def gen_plot(latency, configs, model, metric):
 
         plt.bar([i+offset for i in x], mean, edgecolor="black",
                 label=common.model_config_labels[config], width=width,
-                color=common.colormap[plot_number], zorder=3.5)
+                color=common.model_config_colors[config], zorder=3.5)
         # for i in x:
         #     plt.errorbar([i+offset], mean[i], std[i], ecolor="k",
         #                  elinewidth=4, markerfacecolor="k", markeredgecolor="k",

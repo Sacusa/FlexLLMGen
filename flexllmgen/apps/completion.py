@@ -79,11 +79,16 @@ def main(args):
     if DEBUG_ENABLED():
         print_dram_utilization(num_memory_numa_nodes)
 
-    for prompt_count, prompt in enumerate(dataset):
+    prompt_count = 0
+
+    for prompt in dataset:
         if prompt_count == args.num_prompts:
             break
 
-        assert(len(prompt) >= args.input_seq_len)
+        if len(prompt) < args.input_seq_len:
+            continue
+
+        prompt_count += 1
 
         tokenized_prompt = tokenizer([prompt[:args.input_seq_len]],
             padding="max_length", max_length=args.input_seq_len).input_ids
