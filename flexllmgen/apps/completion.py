@@ -8,7 +8,7 @@ import time
 
 from datasets import load_dataset
 from flexgen.flex_opt import (Policy, OptLM, ExecutionEnv, CompressionConfig,
-        str2bool)
+        str2bool, WeightSchedulingPolicy)
 from transformers import AutoTokenizer
 
 DEBUG_ENABLED = lambda: args.print_debug_messages == True
@@ -61,7 +61,9 @@ def main(args):
                     comp_cache_config=CompressionConfig(
                         num_bits=4, group_size=64,
                         group_dim=2, symmetric=False),
-                    print_allocation_trace=args.print_allocation_trace)
+                    print_allocation_trace=args.print_allocation_trace,
+                    weight_scheduling_policy=\
+                        WeightSchedulingPolicy[args.weight_scheduling_policy])
 
     # Load the tokenizer and the model
     DEBUG_PRINT("Initialize")
@@ -166,6 +168,9 @@ if __name__ == "__main__":
         const=True, default=False)
     parser.add_argument("--print-allocation-trace", type=str2bool, nargs="?",
         const=True, default=False)
+    parser.add_argument("--weight-scheduling-policy", type=str,
+        choices=[e.name for e in WeightSchedulingPolicy],
+        default=WeightSchedulingPolicy.BASELINE.name)
 
     # HuggingFace parameters
     parser.add_argument("--cache-dir", type=str,
